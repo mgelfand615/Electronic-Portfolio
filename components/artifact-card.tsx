@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Artifact } from "@/content/site";
 import { ArrowIcon, CloseIcon, ExternalIcon } from "@/components/icons";
-import { clean } from "@/lib/format";
+import { asset, clean } from "@/lib/format";
 
 export function ArtifactCard({ artifact }: { artifact: Artifact }) {
   const [open, setOpen] = useState(false);
@@ -69,7 +69,7 @@ export function ArtifactCard({ artifact }: { artifact: Artifact }) {
         {artifact.image ? (
           <div className="relative aspect-[16/10] w-full overflow-hidden bg-surface-2">
             <Image
-              src={artifact.image}
+              src={asset(artifact.image)}
               alt=""
               fill
               sizes="(max-width: 768px) 100vw, 400px"
@@ -158,7 +158,7 @@ export function ArtifactCard({ artifact }: { artifact: Artifact }) {
               {artifact.image && (
                 <div className="relative mb-6 aspect-[16/9] w-full overflow-hidden rounded-xl bg-surface-2">
                   <Image
-                    src={artifact.image}
+                    src={asset(artifact.image)}
                     alt=""
                     fill
                     sizes="(max-width: 768px) 100vw, 640px"
