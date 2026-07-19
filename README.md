@@ -100,10 +100,23 @@ public/
 
 ## Deploying
 
-Static-friendly — deploys anywhere. Common options:
+The site is configured as a **static export** (`output: "export"` in
+`next.config.ts`) and auto-deploys to **GitHub Pages** on every push to `main`
+via [.github/workflows/deploy.yml](.github/workflows/deploy.yml).
 
-- **Vercel:** import the repo; zero config.
-- **GitHub Pages / Netlify:** `npm run build`. For a fully static export, add
-  `output: "export"` to `next.config.ts` and deploy the `out/` folder.
+Live URL: **https://mgelfand615.github.io/Electronic-Portfolio/**
 
-Set `site.url` in `content/site.ts` to your final domain so social/SEO metadata is correct.
+**How it works**
+- CI runs `npm run build` with `NEXT_PUBLIC_BASE_PATH=/Electronic-Portfolio`
+  (the project sub-path), producing the static site in `out/`, then publishes it.
+- `next/link` prefixes that base path automatically. For images, wrap the `src`
+  with `asset()` from `lib/format.ts` (already done for the headshot and artifact
+  images) so they resolve under the sub-path.
+- One-time repo setting: **Settings → Pages → Build and deployment → Source: GitHub Actions.**
+
+**Local builds** are unaffected — `NEXT_PUBLIC_BASE_PATH` is only set in CI, so
+`npm run dev` and `npm run build` serve from the root.
+
+**Other hosts** (Vercel, Netlify): import the repo; the static export works as-is.
+
+Set `site.url` in `content/site.ts` to the final URL so social/SEO metadata is correct.

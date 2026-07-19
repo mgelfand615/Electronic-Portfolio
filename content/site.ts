@@ -209,6 +209,6 @@ export const site = {
   shortName: "ePortfolio",
   description:
     "A professional educator ePortfolio organized around the ISTE Standards for Educators.",
-  /** Set to your deployed origin for absolute metadata URLs, e.g. https://name.github.io */
-  url: "https://example.com",
+  /** Deployed origin for absolute metadata URLs. */
+  url: "https://mgelfand615.github.io/Electronic-Portfolio",
 };

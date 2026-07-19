@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { domains, person, socials } from "@/content/site";
 import { socialIcons, ArrowIcon } from "@/components/icons";
-import { clean, initials } from "@/lib/format";
+import { asset, clean, initials } from "@/lib/format";
 
 export default function Home() {
   const cleanName = clean(person.name);
@@ -60,7 +60,7 @@ export default function Home() {
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.5rem] border border-line bg-surface-2">
                 {person.photo ? (
                   <Image
-                    src={person.photo}
+                    src={asset(person.photo)}
                     alt={`Portrait of ${cleanName}`}
                     fill
                     priority
