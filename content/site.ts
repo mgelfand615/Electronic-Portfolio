@@ -64,13 +64,13 @@ export const person = {
   organization: "Charlotte-Mecklenburg Schools",
   /** Optional program / course this portfolio supports */
   program:
-    "M.Ed. in Curriculum & Instruction · ELDT 5100 — Technology Integration in Education",
+    "Master of Education (M.Ed.) in Curriculum & Instruction · ELDT 5100 — Technology Integration in Education",
   /** Hero headline — the big editorial statement */
   headline: "Educator. Learner. Designer of student-centered experiences.",
   /** 1–3 sentence intro shown on the home page */
   intro: [
-    "Welcome to my professional ePortfolio. I'm an elementary educator with Charlotte-Mecklenburg Schools, documenting my growth through the ISTE Standards for Educators — Learner, Leader, Citizen, and Designer.",
-    "As a graduate student pursuing my M.Ed. in Curriculum & Instruction, I'm passionate about integrating technology in ways that make learning more engaging, equitable, and student-centered for every child in my classroom. Each section pairs reflection with real artifacts from my practice.",
+    "Welcome to my professional electronic portfolio (ePortfolio). I'm an elementary educator with Charlotte-Mecklenburg Schools, documenting my growth through the International Society for Technology in Education (ISTE) Standards for Educators — Citizen, Leader, Learner, and Designer.",
+    "As a graduate student pursuing my Master of Education (M.Ed.) in Curriculum & Instruction, I'm passionate about integrating technology in ways that make learning more engaging, equitable, and student-centered for every child in my classroom. Each section pairs reflection with real artifacts from my practice.",
   ],
   /** Path to a headshot placed in /public (e.g. "/headshot.jpg"). Empty = initials avatar. */
   photo: "",
@@ -89,9 +89,9 @@ export const socials: SocialLink[] = [
 
 export const nav: NavLink[] = [
   { label: "Home", href: "/" },
-  { label: "Learner", href: "/learner" },
-  { label: "Leader", href: "/leader" },
   { label: "Citizen", href: "/citizen" },
+  { label: "Leader", href: "/leader" },
+  { label: "Learner", href: "/learner" },
   { label: "Designer", href: "/designer" },
 ];
 
@@ -99,27 +99,27 @@ export const nav: NavLink[] = [
 
 export const domains: Domain[] = [
   {
-    slug: "learner",
+    slug: "citizen",
     index: "01",
-    standard: "ISTE 2.1",
-    title: "Learner",
-    tagline: "Continually growing through and with others.",
+    standard: "ISTE 2.3",
+    title: "Citizen",
+    tagline: "Modeling responsible participation in the digital world.",
     description:
-      "Educators continually improve their practice by learning from and with others and by exploring proven and promising practices that leverage technology to improve student learning.",
+      "Educators inspire students to positively contribute to and responsibly participate in the digital world.",
     narrative: [
-      "«Write about how you pursue ongoing professional learning — PLCs, conferences, coursework, online communities, and how you set and reflect on professional goals.»",
+      "«Write about how you cultivate digital citizenship — online safety, media literacy, ethical use of technology, and empowering students as responsible digital contributors.»",
     ],
     artifacts: [
       {
-        id: "learner-artifact-1",
-        title: "«Professional Learning Artifact»",
+        id: "citizen-artifact-1",
+        title: "«Digital Citizenship Artifact»",
         summary: "«One line describing the evidence and what it shows.»",
-        tags: ["Professional Development", "Reflection"],
+        tags: ["Digital Citizenship", "Media Literacy"],
         reflection: [
-          "«Describe the context: what was the learning experience or goal?»",
-          "«Reflect: what did you learn, and how did it change your practice with students?»",
+          "«Describe the lesson, policy, or practice you developed.»",
+          "«Reflect on how it helped students participate responsibly online.»",
+          "«Justify why this project belongs under the Citizen standard.»",
         ],
-        // evidence: { label: "View certificate", href: "#" },
       },
     ],
   },
@@ -143,35 +143,41 @@ export const domains: Domain[] = [
         reflection: [
           "«Describe the initiative or leadership role you took on.»",
           "«Reflect on the impact for students, colleagues, or your community.»",
+          "«Justify why this project belongs under the Leader standard.»",
         ],
       },
     ],
   },
   {
-    slug: "citizen",
+    slug: "learner",
     index: "03",
-    standard: "ISTE 2.3",
-    title: "Citizen",
-    tagline: "Modeling responsible participation in the digital world.",
+    standard: "ISTE 2.1",
+    title: "Learner",
+    tagline: "Continually growing through and with others.",
     description:
-      "Educators inspire students to positively contribute to and responsibly participate in the digital world.",
+      "Educators continually improve their practice by learning from and with others and by exploring proven and promising practices that leverage technology to improve student learning.",
     narrative: [
-      "«Write about how you cultivate digital citizenship — online safety, media literacy, ethical use of technology, and empowering students as responsible digital contributors.»",
+      "«Write about how you pursue ongoing professional learning — professional learning communities (PLCs), conferences, coursework, online communities, and how you set and reflect on professional goals.»",
     ],
     artifacts: [
       {
-        id: "citizen-artifact-1",
-        title: "«Digital Citizenship Artifact»",
+        id: "learner-artifact-1",
+        title: "«Professional Learning Artifact»",
         summary: "«One line describing the evidence and what it shows.»",
-        tags: ["Digital Citizenship", "Media Literacy"],
+        tags: ["Professional Development", "Reflection"],
         reflection: [
-          "«Describe the lesson, policy, or practice you developed.»",
-          "«Reflect on how it helped students participate responsibly online.»",
+          "«Describe the context: what was the learning experience or goal?»",
+          "«Reflect: what did you learn, and how did it change your practice with students?»",
+          "«Justify why this project belongs under the Learner standard.»",
         ],
+        // evidence: { label: "View certificate", href: "#" },
       },
     ],
   },
   {
+    // Page 4 — "your choice" of the remaining ISTE standards. Swap in a
+    // different standard (Collaborator, Facilitator, Analyst) by editing
+    // this block if you'd rather feature another.
     slug: "designer",
     index: "04",
     standard: "ISTE 2.5",
@@ -180,17 +186,18 @@ export const domains: Domain[] = [
     description:
       "Educators design authentic, learner-driven activities and environments that recognize and accommodate learner variability.",
     narrative: [
-      "«Write about how you design instruction — using UDL, differentiation, and technology to build authentic learning environments responsive to every learner.»",
+      "«Write about how you design instruction — using Universal Design for Learning (UDL), differentiation, and technology to build authentic learning environments responsive to every learner.»",
     ],
     artifacts: [
       {
         id: "designer-artifact-1",
         title: "«Instructional Design Artifact»",
         summary: "«One line describing the evidence and what it shows.»",
-        tags: ["Instructional Design", "UDL"],
+        tags: ["Instructional Design", "Universal Design for Learning"],
         reflection: [
           "«Describe the learning experience you designed and the tools you used.»",
           "«Reflect on how the design accommodated learner variability.»",
+          "«Justify why this project belongs under the Designer standard.»",
         ],
       },
     ],
