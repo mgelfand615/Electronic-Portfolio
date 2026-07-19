@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/* Class-based dark mode: toggling `.dark` on <html> flips the theme.
+   (Overrides Tailwind's default prefers-color-scheme behaviour.) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ───────────────────────────────────────────────────────────────────────
+   Design tokens — warm editorial palette.
+   Light + dark values live as CSS variables; @theme inline maps them to
+   Tailwind utilities (bg-bg, text-ink, border-line, text-accent, …).
+   Swap --accent / --highlight here to re-skin the whole site.
+   ─────────────────────────────────────────────────────────────────────── */
+:root {
+  --bg: #fbf8f3;         /* warm ivory paper           */
+  --surface: #ffffff;    /* cards / raised panels      */
+  --surface-2: #f3ede3;  /* subtle warm panel          */
+  --ink: #211c17;        /* primary text (warm black)  */
+  --muted: #6b6258;      /* secondary text             */
+  --line: #e7dfd3;       /* borders / hairlines        */
+  --accent: #3f6b57;     /* primary accent (deep sage) */
+  --accent-ink: #ffffff; /* text on accent             */
+  --accent-soft: #e5efe8;/* mint tint background       */
+  --highlight: #c2683f;  /* terracotta secondary touch */
+}
+
+.dark {
+  --bg: #14110e;
+  --surface: #1c1815;
+  --surface-2: #241f1a;
+  --ink: #f2ece3;
+  --muted: #a69b8d;
+  --line: #322b24;
+  --accent: #86bda4;
+  --accent-ink: #0c1712;
+  --accent-soft: #1b302a;
+  --highlight: #e0996b;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-highlight: var(--highlight);
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-fraunces);
+
+  --radius-card: 1rem;
+}
+
+/* ── Base ──────────────────────────────────────────────────────────────── */
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "kern", "liga";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Editorial display type for headings via .font-display utility */
+.font-display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+  font-optical-sizing: auto;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* Consistent, visible keyboard focus */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Fine hairline used to separate editorial sections */
+.rule {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--line) 12%,
+    var(--line) 88%,
+    transparent
+  );
+}
