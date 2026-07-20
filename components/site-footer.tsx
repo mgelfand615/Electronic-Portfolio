@@ -1,5 +1,5 @@
-import { person, socials } from "@/content/site";
-import { ArrowIcon } from "@/components/icons";
+import Link from "next/link";
+import { nav, person, socials } from "@/content/site";
 import { clean } from "@/lib/format";
 
 export function SiteFooter() {
@@ -9,29 +9,46 @@ export function SiteFooter() {
 
   return (
     <footer className="border-t border-line bg-surface-2">
-      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
-        {/* Contact invite */}
-        {email && (
-          <a
-            href={email.href}
-            className="group inline-flex items-center gap-2 text-sm font-medium text-accent"
+      <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8">
+        {/* Wordmark + quick links */}
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <Link
+            href="/"
+            className="text-sm font-medium tracking-tight text-ink transition-colors hover:text-accent"
           >
-            Get in touch
-            <ArrowIcon className="transition-transform duration-200 group-hover:translate-x-1" />
-          </a>
-        )}
+            {cleanName}
+            <span className="text-muted"> · ePortfolio</span>
+          </Link>
 
-        {/* Oversized editorial wordmark */}
-        <p className="mt-6 font-display text-5xl font-semibold leading-[0.95] tracking-tight text-ink sm:text-8xl">
-          {cleanName}
-        </p>
+          <nav
+            aria-label="Footer"
+            className="flex flex-wrap gap-x-6 gap-y-2"
+          >
+            {nav.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm text-muted transition-colors hover:text-accent"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
 
-        {/* Thin baseline */}
-        <div className="mt-12 flex flex-col gap-2 border-t border-line pt-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
+        {/* Baseline: copyright + contact */}
+        <div className="mt-8 flex flex-col gap-2 border-t border-line pt-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} {cleanName} · Electronic Portfolio
+            © {year} {cleanName} · Aligned to the ISTE Standards for Educators
           </p>
-          <p>Aligned to the ISTE Standards for Educators</p>
+          {email && (
+            <a
+              href={email.href}
+              className="transition-colors hover:text-accent"
+            >
+              {email.href.replace("mailto:", "")}
+            </a>
+          )}
         </div>
       </div>
     </footer>
