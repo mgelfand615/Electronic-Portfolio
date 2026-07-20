@@ -92,7 +92,7 @@ export const nav: NavLink[] = [
   { label: "Citizen", href: "/citizen" },
   { label: "Leader", href: "/leader" },
   { label: "Learner", href: "/learner" },
-  { label: "Designer", href: "/designer" },
+  { label: "«Your Standard»", href: "/choice" },
 ];
 
 /* ── The four ISTE Educator domains ─────────────────────────────────────── */
@@ -175,29 +175,43 @@ export const domains: Domain[] = [
     ],
   },
   {
-    // Page 4 — "your choice" of the remaining ISTE standards. Swap in a
-    // different standard (Collaborator, Facilitator, Analyst) by editing
-    // this block if you'd rather feature another.
-    slug: "designer",
+    // ── Page 4: YOUR CHOICE of a remaining ISTE standard ──────────────────
+    // The reference portfolio used "Designer" here — this is a placeholder so
+    // you can pick your OWN. Pages 1–3 use Citizen (2.3), Leader (2.2), and
+    // Learner (2.1); choose ONE of the remaining standards below, then replace
+    // the «placeholders». Optionally rename `slug` + the app/choice/ folder to
+    // match your pick (e.g. "collaborator") so the URL reads nicely.
+    //
+    //   • ISTE 2.4 Collaborator — Educators dedicate time to collaborate with
+    //     colleagues and students to improve practice, discover and share
+    //     resources and ideas, and solve problems.
+    //   • ISTE 2.5 Designer     — Educators design authentic, learner-driven
+    //     activities and environments that recognize and accommodate learner
+    //     variability.
+    //   • ISTE 2.6 Facilitator  — Educators facilitate learning with technology
+    //     to support student achievement of the ISTE Standards for Students.
+    //   • ISTE 2.7 Analyst      — Educators understand and use data to drive
+    //     their instruction and support students in achieving their goals.
+    slug: "choice",
     index: "04",
-    standard: "ISTE 2.5",
-    title: "Designer",
-    tagline: "Crafting authentic, learner-driven experiences.",
+    standard: "«ISTE 2.x»",
+    title: "«Your Chosen Standard»",
+    tagline: "«One line capturing the standard you choose.»",
     description:
-      "Educators design authentic, learner-driven activities and environments that recognize and accommodate learner variability.",
+      "«Paste the official ISTE description of the standard you selected here.»",
     narrative: [
-      "«Write about how you design instruction — using Universal Design for Learning (UDL), differentiation, and technology to build authentic learning environments responsive to every learner.»",
+      "«Write about how your practice demonstrates the standard you chose.»",
     ],
     artifacts: [
       {
-        id: "designer-artifact-1",
-        title: "«Instructional Design Artifact»",
+        id: "choice-artifact-1",
+        title: "«Artifact for Your Chosen Standard»",
         summary: "«One line describing the evidence and what it shows.»",
-        tags: ["Instructional Design", "Universal Design for Learning"],
+        tags: ["«Tag»"],
         reflection: [
-          "«Describe the learning experience you designed and the tools you used.»",
-          "«Reflect on how the design accommodated learner variability.»",
-          "«Justify why this project belongs under the Designer standard.»",
+          "«Describe the project you created and the tools you used.»",
+          "«Reflect on what it demonstrates about your practice.»",
+          "«Justify why this project belongs under the standard you chose.»",
         ],
       },
     ],
