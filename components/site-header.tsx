@@ -47,7 +47,7 @@ export function SiteHeader() {
           className="group flex items-center gap-3"
           aria-label="Home"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent font-display text-sm font-semibold text-accent-ink">
+          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent font-display text-sm font-semibold text-accent-ink dark:bg-black dark:text-accent">
             {initials(person.name)}
           </span>
           <span className="hidden text-sm font-medium tracking-tight text-ink sm:inline">
