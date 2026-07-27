@@ -73,7 +73,7 @@ export const person = {
     "As a graduate student pursuing my Master of Education (M.Ed.) in Curriculum & Instruction, I'm passionate about integrating technology in ways that make learning more engaging, equitable, and student-centered for every child in my classroom. Each section pairs reflection with real artifacts from my practice.",
   ],
   /** Path to a headshot placed in /public (e.g. "/headshot.jpg"). Empty = initials avatar. */
-  photo: "",
+  photo: "/headshot.jpg",
   location: "Charlotte, North Carolina",
 };
 
