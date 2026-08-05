@@ -2,11 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { domains, person, socials } from "@/content/site";
 import { socialIcons, ArrowIcon } from "@/components/icons";
+import { CopyEmail } from "@/components/copy-email";
 import { asset, clean, initials } from "@/lib/format";
 
 export default function Home() {
   const cleanName = clean(person.name);
   const cleanRole = clean(person.role);
+  const emailAddress = socials.find((s) => s.icon === "email")?.href.replace(
+    /^mailto:/,
+    "",
+  );
+  const otherSocials = socials.filter((s) => s.icon !== "email");
 
   return (
     <>
@@ -32,14 +38,8 @@ export default function Home() {
               </p>
 
               <div className="mt-8 flex flex-wrap items-center gap-3">
-                <Link
-                  href="/learner"
-                  className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-accent-ink transition-opacity hover:opacity-90"
-                >
-                  Explore my portfolio
-                  <ArrowIcon />
-                </Link>
-                {socials.map((s) => {
+                {emailAddress && <CopyEmail email={emailAddress} />}
+                {otherSocials.map((s) => {
                   const Icon = socialIcons[s.icon];
                   return (
                     <a
@@ -113,9 +113,9 @@ export default function Home() {
             Four dimensions of practice
           </h2>
           <p className="mt-3 text-muted">
-            My portfolio is organized around the ISTE Standards for Educators.
-            Each area pairs the standard with reflection and evidence from my
-            classroom.
+            My portfolio is organized around the ISTE Standards for Education
+            Leaders. Each area pairs the standard with reflection and evidence
+            from my classroom.
           </p>
         </div>
 

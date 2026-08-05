@@ -39,7 +39,8 @@ export function SiteFooter() {
         {/* Baseline: copyright + contact */}
         <div className="mt-8 flex flex-col gap-2 border-t border-line pt-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} {cleanName} · Aligned to the ISTE Standards for Educators
+            © {year} {cleanName} · Aligned to the ISTE Standards for Education
+            Leaders
           </p>
           {email && (
             <a

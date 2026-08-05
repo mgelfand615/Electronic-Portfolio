@@ -69,8 +69,8 @@ export const person = {
   headline: "Educator. Learner. Designer of student-centered experiences.",
   /** 1–3 sentence intro shown on the home page */
   intro: [
-    "Welcome to my professional electronic portfolio (ePortfolio). I'm an elementary educator with Charlotte-Mecklenburg Schools, documenting my growth through the International Society for Technology in Education (ISTE) Standards for Educators — Citizen, Leader, Learner, and Designer.",
-    "As a graduate student pursuing my Master of Education (M.Ed.) in Curriculum & Instruction, I'm passionate about integrating technology in ways that make learning more engaging, equitable, and student-centered for every child in my classroom. Each section pairs reflection with real artifacts from my practice.",
+    "Welcome to my professional electronic portfolio (ePortfolio), created to satisfy the requirements of ELDT 5100 — Technology Integration in Education. This site documents my growth through the International Society for Technology in Education (ISTE) Standards for Education Leaders: Citizen, Leader, Learner, and Designer, with each section pairing reflection with real artifacts from my practice.",
+    "I'm an elementary school teacher with Charlotte-Mecklenburg Schools. I've taught 3rd grade and 2nd grade, and I'll soon be teaching 4th grade. I'm passionate about integrating technology in ways that make learning more engaging, equitable, and student-centered for every child in my classroom.",
   ],
   /** Path to a headshot placed in /public (e.g. "/headshot.jpg"). Empty = initials avatar. */
   photo: "/headshot.jpg",
@@ -221,7 +221,7 @@ export const site = {
   name: `${person.name} — ePortfolio`,
   shortName: "ePortfolio",
   description:
-    "A professional educator ePortfolio organized around the ISTE Standards for Educators.",
+    "A professional educator ePortfolio organized around the ISTE Standards for Education Leaders.",
   /** Deployed origin for absolute metadata URLs. */
   url: "https://mgelfand615.github.io/Electronic-Portfolio",
 };
