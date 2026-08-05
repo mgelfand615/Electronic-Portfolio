@@ -210,16 +210,18 @@ export const domains: Domain[] = [
     artifacts: [
       {
         id: "learner-artifact-1",
-        title: "«Professional Learning Artifact»",
-        summary: "«Describe the artifact: what it is, what it contains, and what it shows.»",
-        tags: ["Professional Development", "Reflection"],
+        title: "AI in Elementary School Classrooms",
+        summary:
+          "A Personal Learning Network (PLN) website I built with my group, focused on how artificial intelligence (AI) can be effectively implemented in elementary school classrooms. The site gathers resources in three areas: how teachers can use artificial intelligence to plan more efficiently, how it can support student learning, and professional development opportunities for educators who want to build their own skills.",
+        tags: ["Personal Learning Network", "Artificial Intelligence"],
         justification: [
-          "«Explain why you included this artifact and how it connects to ISTE Standard 3.5, Connected Learner.»",
+          "This project continued my own technology education and reminded me that there is always more to learn and room for improvement. Technology is constantly evolving, and it is important for every education leader to keep learning new technology as it is developed so that we can properly support teachers in the classroom.",
         ],
         reflection: [
-          "«Reflect on completing this project: what you learned and how it shaped your practice.»",
+          "Building this site surfaced so many interesting resources that I plan to implement in my own classroom this coming school year. It opened my eyes to how much is available to meet the needs of teachers across very different types of classrooms, and to how those same tools can be adapted to meet the needs of individual students. I have already signed up to attend a professional development session through SchoolAI, and I am excited to try it out with my students.",
         ],
-        // evidence: { label: "View certificate", href: "#" },
+        // TODO: add the PLN website link when it is ready. Uncomment and set href:
+        // evidence: { label: "Visit the website", href: "https://…" },
       },
     ],
   },
