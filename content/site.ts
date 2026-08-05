@@ -138,7 +138,8 @@ export const domains: Domain[] = [
           "This memo models ISTE Standard 3.1.c (Model Inclusive, Healthy Use) by explaining how excessive device use affects students' socioemotional health and sleep, and Standard 3.1.d (Model Safe, Ethical, Legal Use) by teaching a concrete strategy — \"Freeze before you 'tease'\" — for respectful online communication.",
         ],
         reflection: [
-          "«Reflect on completing this project: what prompted the memo, what you learned while writing it, and what changed in your practice or in how families responded.»",
+          "Completing this project taught me how important it is to share technology information openly with staff, students, and families. Technology is used for so much these days — how students learn, how they communicate, and how they spend their time outside of school — which makes it essential that everyone in our school community knows how to use it safely and respectfully.",
+          "Writing for families in particular pushed me to translate research into practical steps they could actually use at home. It reinforced that digital citizenship works best when school and home are holding the same expectations, and that my role extends beyond teaching students directly to equipping the adults around them.",
         ],
         evidence: {
           label: "Read the memo (PDF)",
