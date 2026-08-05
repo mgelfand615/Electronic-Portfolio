@@ -235,8 +235,12 @@ export const domains: Domain[] = [
         reflection: [
           "I found so many interesting resources that I plan to implement into my own classroom this coming school year. It really opened my eyes to the amount of resources out there to meet the needs of teachers in different types of classrooms and how it can also meet the needs of individual students. I've signed up to attend a professional development session through SchoolAI and I'm excited to try it out in my classroom.",
         ],
-        // TODO: add the PLN website link when it is ready. Uncomment and set href:
-        // evidence: [{ label: "Visit the website", href: "https://…" }],
+        evidence: [
+          {
+            label: "Visit the website",
+            href: "https://sites.google.com/charlotte.edu/elementartificialintelligence/home",
+          },
+        ],
       },
     ],
   },
