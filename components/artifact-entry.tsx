@@ -49,6 +49,8 @@ export function ArtifactEntry({ artifact }: { artifact: Artifact }) {
               <span className="underline decoration-line decoration-2 underline-offset-4 group-hover:decoration-accent">
                 {artifact.title}
               </span>
+              {/* Not shown, but tells screen readers where the link goes. */}
+              <span className="sr-only"> — {evidence.label}</span>
               <ExternalIcon className="mt-1.5 shrink-0 text-base text-muted transition-colors group-hover:text-accent" />
             </a>
           ) : (
@@ -59,10 +61,6 @@ export function ArtifactEntry({ artifact }: { artifact: Artifact }) {
         <p className="mt-3 text-[15px] leading-relaxed text-ink/90">
           {artifact.summary}
         </p>
-
-        {evidence && (
-          <p className="mt-4 text-sm text-muted">{evidence.label}</p>
-        )}
       </div>
 
       {/* ── Right: justification + reflection ───────────────────────── */}
