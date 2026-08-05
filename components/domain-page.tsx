@@ -11,6 +11,9 @@ import { ArrowIcon } from "@/components/icons";
 export function DomainPage({ domain }: { domain: Domain }) {
   const idx = domains.findIndex((d) => d.slug === domain.slug);
   const next = domains[(idx + 1) % domains.length];
+  // Write the acronym out on first use on every page. `domain.standard` stays
+  // short ("ISTE 3.1") for the home page grid and the next-standard link.
+  const standardNumber = domain.standard.replace(/^ISTE\s*/, "");
 
   return (
     <article>
@@ -18,7 +21,8 @@ export function DomainPage({ domain }: { domain: Domain }) {
       <header className="border-b border-line bg-surface-2">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-            {domain.standard}
+            International Society for Technology in Education (ISTE) Standard{" "}
+            {standardNumber}
           </p>
           <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-ink sm:text-6xl">
             {domain.title}

@@ -112,8 +112,8 @@ export const nav: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "Citizen", href: "/citizen" },
   { label: "Leader", href: "/leader" },
-  { label: "Designer", href: "/designer" },
   { label: "Learner", href: "/learner" },
+  { label: "Designer", href: "/designer" },
 ];
 
 /* ── The four ISTE Education Leaders domains ─────────────────────────────────
@@ -166,7 +166,7 @@ export const domains: Domain[] = [
           "A critique of Edelberg's (2020) study examining how K-12 public school district superintendents perceive their own roles and responsibilities as instructional technology leaders. My review summarizes the study's central finding that district leaders prioritize the logistics of technology implementation over the pedagogical strategies needed to improve classroom instruction, then evaluates its threats to validity and its limitations, including the reliance on self-reported survey data and the absence of any comparison across socioeconomic status.",
         tags: ["Research Critique", "Technology Leadership"],
         justification: [
-          "I included this critique under the Empowering Leader standard because the superintendents did not ensure that teachers had the proper competency to execute the technology implementation. The study concluded that district leaders prioritize the logistical implementation of technology rather than the pedagogical strategies needed to improve classroom instruction.",
+          "I included this critique under the Empowering Leader standard because the superintendents did not ensure that teachers had the proper competency to execute the technology implementation, which is exactly what Standard 3.3.b asks of leaders in building the confidence and competency of educators. The study concluded that district leaders prioritize the logistical implementation of technology rather than the pedagogical strategies needed to improve classroom instruction, so the emphasis never reached the teachers who had to carry it out.",
           "The article also aligns with the Visionary Planner standard. Superintendents agree that creating a technology plan and establishing district goals are important (3.2.b), but they fell short on evaluating the plan's progress as technology was implemented (3.2.c).",
         ],
         reflection: [
@@ -176,6 +176,35 @@ export const domains: Domain[] = [
           {
             label: "Read the critique (PDF)",
             href: "/artifacts/leader-research-article-critique.pdf",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "learner",
+    standard: "ISTE 3.5",
+    title: "Learner",
+    tagline: "Connected Learner",
+    description:
+      "Connected Learner: Leaders model and promote continuous professional learning for themselves and others.",
+    artifacts: [
+      {
+        id: "learner-artifact-1",
+        title: "AI in Elementary School Classrooms",
+        summary:
+          "A Personal Learning Network (PLN) project I completed with my group where we focused on how artificial intelligence (AI) can be effectively implemented into elementary school classrooms. The website provides resources for how teachers can use AI to plan more efficiently, how AI can support student learning, and professional development opportunities.",
+        tags: ["Personal Learning Network", "Artificial Intelligence"],
+        justification: [
+          "This project continued my technology education and there is always more to learn and room for improvement. Building a Personal Learning Network with my group connects to Standard 3.5.b, which asks leaders to participate in professional learning networks to learn collaboratively with other professionals, and signing up for professional development through SchoolAI reflects Standard 3.5.a, setting goals to remain current on emerging technologies. Technology is constantly evolving and it's important for every education leader to be learning the new technology as it is developed so we can properly support teachers in the classroom.",
+        ],
+        reflection: [
+          "I found so many interesting resources that I plan to implement into my own classroom this coming school year. It really opened my eyes to the amount of resources out there to meet the needs of teachers in different types of classrooms and how it can also meet the needs of individual students. I've signed up to attend a professional development session through SchoolAI and I'm excited to try it out in my classroom.",
+        ],
+        evidence: [
+          {
+            label: "Visit the website",
+            href: "https://sites.google.com/charlotte.edu/elementartificialintelligence/home",
           },
         ],
       },
@@ -211,35 +240,6 @@ export const domains: Domain[] = [
             href: "https://edpuzzle.com/media/6a5fd9527dbb8c4aad23d85e",
           },
           { label: "Visit Edpuzzle", href: "https://edpuzzle.com" },
-        ],
-      },
-    ],
-  },
-  {
-    slug: "learner",
-    standard: "ISTE 3.5",
-    title: "Learner",
-    tagline: "Connected Learner",
-    description:
-      "Connected Learner: Leaders model and promote continuous professional learning for themselves and others.",
-    artifacts: [
-      {
-        id: "learner-artifact-1",
-        title: "AI in Elementary School Classrooms",
-        summary:
-          "A Personal Learning Network (PLN) project I completed with my group where we focused on how artificial intelligence (AI) can be effectively implemented into elementary school classrooms. The website provides resources for how teachers can use AI to plan more efficiently, how AI can support student learning, and professional development opportunities.",
-        tags: ["Personal Learning Network", "Artificial Intelligence"],
-        justification: [
-          "This project continued my technology education and there is always more to learn and room for improvement. Technology is constantly evolving and it's important for every education leader to be learning the new technology as it is developed so we can properly support teachers in the classroom.",
-        ],
-        reflection: [
-          "I found so many interesting resources that I plan to implement into my own classroom this coming school year. It really opened my eyes to the amount of resources out there to meet the needs of teachers in different types of classrooms and how it can also meet the needs of individual students. I've signed up to attend a professional development session through SchoolAI and I'm excited to try it out in my classroom.",
-        ],
-        evidence: [
-          {
-            label: "Visit the website",
-            href: "https://sites.google.com/charlotte.edu/elementartificialintelligence/home",
-          },
         ],
       },
     ],
