@@ -23,16 +23,18 @@ export type SocialLink = {
 };
 
 export type Artifact = {
-  /** Stable id used for the modal + anchor links */
+  /** Stable id used for anchor links */
   id: string;
   title: string;
-  /** Short one-line summary shown on the card */
+  /** Description of the artifact, shown in the left column */
   summary: string;
   /** Optional tag chips (e.g. "Google Classroom", "PBL", "Assessment") */
   tags?: string[];
-  /** Longer reflection shown inside the modal (supports multiple paragraphs) */
+  /** Why this artifact is here + how it connects to the ISTE standard */
+  justification: string[];
+  /** Your reflection on completing the project */
   reflection: string[];
-  /** Optional external evidence link (Drive doc, slides, video, etc.) */
+  /** Link to the artifact itself (PDF in /public/artifacts, Drive, video, …) */
   evidence?: { label: string; href: string };
   /** Optional image dropped into /public/artifacts (e.g. "/artifacts/x.jpg") */
   image?: string;
@@ -41,17 +43,15 @@ export type Artifact = {
 export type Domain = {
   /** URL slug, e.g. "learner" -> /learner */
   slug: string;
-  /** Display index shown as a big editorial numeral, e.g. "01" */
+  /** Editorial numeral shown on the home page grid only, e.g. "01" */
   index: string;
-  /** ISTE standard reference, e.g. "ISTE 2.1" */
+  /** ISTE standard reference, e.g. "ISTE 3.1" */
   standard: string;
   title: string;
-  /** One-line tagline under the title */
+  /** One-line tagline — used on the home page grid only */
   tagline: string;
-  /** Official-ish summary of what the standard asks of educators */
+  /** The official standard text, shown under "The Standard" on the page */
   description: string;
-  /** Your personal narrative / how you demonstrate this domain */
-  narrative: string[];
   artifacts: Artifact[];
 };
 
@@ -130,9 +130,6 @@ export const domains: Domain[] = [
     tagline: "Advancing equity, inclusion, and digital citizenship.",
     description:
       "Equity and Citizenship Advocate: Leaders use technology to increase equity, inclusion and digital citizenship practices.",
-    narrative: [
-      "«Write about how you cultivate digital citizenship — online safety, media literacy, ethical use of technology, and empowering students as responsible digital contributors.»",
-    ],
     artifacts: [
       {
         id: "citizen-artifact-1",
@@ -140,10 +137,11 @@ export const domains: Domain[] = [
         summary:
           "A memo to families with research-based strategies for healthy technology use and reducing online-rooted peer conflict.",
         tags: ["Family Communication", "Digital Citizenship"],
-        reflection: [
-          "«Describe the context: what prompted this memo, and how did you develop it?»",
-          "«Reflect on how it helped students participate responsibly online.»",
+        justification: [
           "This memo models ISTE Standard 3.1.c (Model Inclusive, Healthy Use) by explaining how excessive device use affects students' socioemotional health and sleep, and Standard 3.1.d (Model Safe, Ethical, Legal Use) by teaching a concrete strategy — \"Freeze before you 'tease'\" — for respectful online communication.",
+        ],
+        reflection: [
+          "«Reflect on completing this project: what prompted the memo, what you learned while writing it, and what changed in your practice or in how families responded.»",
         ],
         evidence: {
           label: "Read the memo (PDF)",
@@ -160,19 +158,17 @@ export const domains: Domain[] = [
     tagline: "Empowering teachers and learners to innovate with technology.",
     description:
       "Empowering Leader: Leaders create a culture where teachers and learners are empowered to use technology in innovative ways to enrich teaching and learning.",
-    narrative: [
-      "«Write about how you lead — mentoring peers, leading initiatives, advocating for equitable access to technology, or shaping a shared vision at your school.»",
-    ],
     artifacts: [
       {
         id: "leader-artifact-1",
         title: "«Leadership Artifact»",
-        summary: "«One line describing the evidence and what it shows.»",
+        summary: "«Describe the artifact — what it is and what it shows.»",
         tags: ["Leadership", "Advocacy"],
+        justification: [
+          "«Explain why you included this artifact and how it connects to ISTE Standard 3.3, Empowering Leader.»",
+        ],
         reflection: [
-          "«Describe the initiative or leadership role you took on.»",
-          "«Reflect on the impact for students, colleagues, or your community.»",
-          "«Justify why this project belongs under the Leader standard.»",
+          "«Reflect on completing this project: what you learned and how it shaped your practice.»",
         ],
       },
     ],
@@ -189,19 +185,17 @@ export const domains: Domain[] = [
     tagline: "Building teams and systems that sustain learning with technology.",
     description:
       "Systems Designer: Leaders build teams and systems to implement, sustain and continually improve the use of technology to support learning.",
-    narrative: [
-      "«Write about how you design instruction and systems — using Universal Design for Learning (UDL), differentiation, and technology to build authentic learning environments responsive to every learner.»",
-    ],
     artifacts: [
       {
         id: "designer-artifact-1",
         title: "«Instructional Design Artifact»",
-        summary: "«One line describing the evidence and what it shows.»",
+        summary: "«Describe the artifact — what it is and what it shows.»",
         tags: ["Instructional Design", "Universal Design for Learning"],
+        justification: [
+          "«Explain why you included this artifact and how it connects to ISTE Standard 3.4, Systems Designer.»",
+        ],
         reflection: [
-          "«Describe the learning experience you designed and the tools you used.»",
-          "«Reflect on how the design accommodated learner variability.»",
-          "«Justify why this project belongs under the Designer standard.»",
+          "«Reflect on completing this project: what you learned and how it shaped your practice.»",
         ],
       },
     ],
@@ -214,19 +208,17 @@ export const domains: Domain[] = [
     tagline: "Modeling continuous professional learning.",
     description:
       "Connected Learner: Leaders model and promote continuous professional learning for themselves and others.",
-    narrative: [
-      "«Write about how you pursue ongoing professional learning — professional learning communities (PLCs), conferences, coursework, online communities, and how you set and reflect on professional goals.»",
-    ],
     artifacts: [
       {
         id: "learner-artifact-1",
         title: "«Professional Learning Artifact»",
-        summary: "«One line describing the evidence and what it shows.»",
+        summary: "«Describe the artifact — what it is and what it shows.»",
         tags: ["Professional Development", "Reflection"],
+        justification: [
+          "«Explain why you included this artifact and how it connects to ISTE Standard 3.5, Connected Learner.»",
+        ],
         reflection: [
-          "«Describe the context: what was the learning experience or goal?»",
-          "«Reflect: what did you learn, and how did it change your practice with students?»",
-          "«Justify why this project belongs under the Learner standard.»",
+          "«Reflect on completing this project: what you learned and how it shaped your practice.»",
         ],
         // evidence: { label: "View certificate", href: "#" },
       },

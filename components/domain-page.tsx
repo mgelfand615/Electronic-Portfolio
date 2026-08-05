@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Domain } from "@/content/site";
 import { domains } from "@/content/site";
-import { ArtifactCard } from "@/components/artifact-card";
+import { ArtifactEntry } from "@/components/artifact-entry";
 import { ArrowIcon } from "@/components/icons";
 
 /**
@@ -14,55 +14,28 @@ export function DomainPage({ domain }: { domain: Domain }) {
 
   return (
     <article>
-      {/* Header band */}
+      {/* Header band — standard reference, page title, then the standard text */}
       <header className="border-b border-line bg-surface-2">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
-          <div className="flex items-baseline gap-4">
-            <span className="font-display text-5xl font-semibold leading-none text-accent/40 sm:text-6xl">
-              {domain.index}
-            </span>
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-              {domain.standard}
-            </span>
-          </div>
-          <h1 className="mt-4 font-display text-4xl font-semibold tracking-tight text-ink sm:text-6xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+            {domain.standard}
+          </p>
+          <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-ink sm:text-6xl">
             {domain.title}
           </h1>
-          <p className="mt-3 max-w-2xl text-lg text-muted sm:text-xl">
-            {domain.tagline}
-          </p>
-        </div>
-      </header>
 
-      {/* Standard + narrative */}
-      <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
-        <div className="grid gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
-          <div>
+          <div className="mt-8 max-w-3xl">
             <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
               The Standard
             </h2>
-            <p className="mt-4 font-display text-xl leading-relaxed text-ink">
+            <p className="mt-3 font-display text-xl leading-relaxed text-ink sm:text-2xl">
               {domain.description}
             </p>
           </div>
-          <div>
-            <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-              My Practice
-            </h2>
-            <div className="mt-4 space-y-4 text-[15px] leading-relaxed text-ink/90">
-              {domain.narrative.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-            </div>
-          </div>
         </div>
-      </section>
+      </header>
 
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="rule" />
-      </div>
-
-      {/* Artifacts */}
+      {/* Evidence & artifacts */}
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
         <div className="flex items-end justify-between gap-4">
           <h2 className="font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
@@ -74,9 +47,9 @@ export function DomainPage({ domain }: { domain: Domain }) {
           </span>
         </div>
 
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 space-y-8">
           {domain.artifacts.map((artifact) => (
-            <ArtifactCard key={artifact.id} artifact={artifact} />
+            <ArtifactEntry key={artifact.id} artifact={artifact} />
           ))}
         </div>
       </section>
