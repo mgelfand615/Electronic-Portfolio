@@ -37,15 +37,9 @@ export function DomainPage({ domain }: { domain: Domain }) {
 
       {/* Evidence & artifacts */}
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
-        <div className="flex items-end justify-between gap-4">
-          <h2 className="font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
-            Evidence &amp; Artifacts
-          </h2>
-          <span className="text-sm text-muted">
-            {domain.artifacts.length}{" "}
-            {domain.artifacts.length === 1 ? "artifact" : "artifacts"}
-          </span>
-        </div>
+        <h2 className="font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+          Evidence &amp; Artifacts
+        </h2>
 
         <div className="mt-8 space-y-8">
           {domain.artifacts.map((artifact) => (
