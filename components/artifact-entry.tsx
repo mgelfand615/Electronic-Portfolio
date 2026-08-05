@@ -50,7 +50,7 @@ export function ArtifactEntry({ artifact }: { artifact: Artifact }) {
                 {artifact.title}
               </span>
               {/* Not shown, but tells screen readers where the link goes. */}
-              <span className="sr-only"> — {evidence.label}</span>
+              <span className="sr-only">, {evidence.label}</span>
               <ExternalIcon className="mt-1.5 shrink-0 text-base text-muted transition-colors group-hover:text-accent" />
             </a>
           ) : (

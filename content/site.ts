@@ -62,12 +62,12 @@ export const person = {
   organization: "Charlotte-Mecklenburg Schools",
   /** Optional program / course this portfolio supports */
   program:
-    "Master of Education (M.Ed.) in Curriculum & Instruction · ELDT 5100 — Technology Integration in Education",
+    "Master of Education (M.Ed.) in Curriculum & Instruction · ELDT 5100: Technology Integration in Education",
   /** Hero headline — the big editorial statement */
   headline: "Educator. Learner. Designer of student-centered experiences.",
   /** Hero blurb — what this site is and why it exists. */
   intro:
-    "Welcome to my professional electronic portfolio (ePortfolio), created to satisfy the requirements of ELDT 5100 — Technology Integration in Education. This site documents my growth through the International Society for Technology in Education (ISTE) Standards for Education Leaders: Citizen, Leader, Designer, and Learner, with each section pairing reflection with real artifacts from my practice.",
+    "Welcome to my professional electronic portfolio (ePortfolio), created to satisfy the requirements of ELDT 5100: Technology Integration in Education. This site documents my growth through the International Society for Technology in Education (ISTE) Standards for Education Leaders: Citizen, Leader, Designer, and Learner, with each section pairing reflection with real artifacts from my practice.",
   /** About Me paragraphs. The first renders larger; the rest as body text. */
   about: [
     "I'm an elementary school teacher with Charlotte-Mecklenburg Schools. I've taught 3rd grade and 2nd grade, and I'll soon be teaching 4th grade.",
@@ -132,14 +132,13 @@ export const domains: Domain[] = [
         id: "citizen-artifact-1",
         title: "Healthy Tech at Home: A Family Memo",
         summary:
-          "A memo to families with research-based strategies for healthy technology use and reducing online-rooted peer conflict.",
+          "A memo written to families after a rise in peer conflict at recess was traced back to group chats students were using outside of school. It explains how excessive screen time and late-night device use affect students' sleep, emotions, and behavior during the school day, drawing on research about screen time and cyberbullying. The memo then offers practical strategies families can use at home, including pausing to think before sending a message, staying familiar with the apps their child uses, setting clear technology agreements, and creating a central charging station at night. It closes by outlining the steps teachers are taking at school to reinforce those same habits.",
         tags: ["Family Communication", "Digital Citizenship"],
         justification: [
-          "This memo models ISTE Standard 3.1.c (Model Inclusive, Healthy Use) by explaining how excessive device use affects students' socioemotional health and sleep, and Standard 3.1.d (Model Safe, Ethical, Legal Use) by teaching a concrete strategy — \"Freeze before you 'tease'\" — for respectful online communication.",
+          "This memo models ISTE Standard 3.1.c (Model Inclusive, Healthy Use) by explaining how excessive device use affects students' socioemotional health and sleep. It also models Standard 3.1.d (Model Safe, Ethical, Legal Use) by teaching students a concrete strategy for respectful online communication: pausing to \"freeze before you tease\" before sending a message.",
         ],
         reflection: [
-          "Completing this project taught me how important it is to share technology information openly with staff, students, and families. Technology is used for so much these days — how students learn, how they communicate, and how they spend their time outside of school — which makes it essential that everyone in our school community knows how to use it safely and respectfully.",
-          "Writing for families in particular pushed me to translate research into practical steps they could actually use at home. It reinforced that digital citizenship works best when school and home are holding the same expectations, and that my role extends beyond teaching students directly to equipping the adults around them.",
+          "Completing this project taught me how important it is to share technology information openly with staff, students, and families. Technology is used for so much these days that everyone in our school community needs to know how to use it safely and respectfully, and writing for families pushed me to turn research into practical steps they could actually use at home.",
         ],
         evidence: {
           label: "Read the memo (PDF)",
@@ -159,7 +158,7 @@ export const domains: Domain[] = [
       {
         id: "leader-artifact-1",
         title: "«Leadership Artifact»",
-        summary: "«Describe the artifact — what it is and what it shows.»",
+        summary: "«Describe the artifact: what it is, what it contains, and what it shows.»",
         tags: ["Leadership", "Advocacy"],
         justification: [
           "«Explain why you included this artifact and how it connects to ISTE Standard 3.3, Empowering Leader.»",
@@ -185,7 +184,7 @@ export const domains: Domain[] = [
       {
         id: "designer-artifact-1",
         title: "«Instructional Design Artifact»",
-        summary: "«Describe the artifact — what it is and what it shows.»",
+        summary: "«Describe the artifact: what it is, what it contains, and what it shows.»",
         tags: ["Instructional Design", "Universal Design for Learning"],
         justification: [
           "«Explain why you included this artifact and how it connects to ISTE Standard 3.4, Systems Designer.»",
@@ -207,7 +206,7 @@ export const domains: Domain[] = [
       {
         id: "learner-artifact-1",
         title: "«Professional Learning Artifact»",
-        summary: "«Describe the artifact — what it is and what it shows.»",
+        summary: "«Describe the artifact: what it is, what it contains, and what it shows.»",
         tags: ["Professional Development", "Reflection"],
         justification: [
           "«Explain why you included this artifact and how it connects to ISTE Standard 3.5, Connected Learner.»",
@@ -229,7 +228,7 @@ export function getDomain(slug: string): Domain | undefined {
 
 export const site = {
   /** Used for <title> templates and metadata */
-  name: `${person.name} — ePortfolio`,
+  name: `${person.name} · ePortfolio`,
   shortName: "ePortfolio",
   description:
     "A professional educator ePortfolio organized around the ISTE Standards for Education Leaders.",
