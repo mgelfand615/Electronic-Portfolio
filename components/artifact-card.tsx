@@ -173,7 +173,7 @@ export function ArtifactCard({ artifact }: { artifact: Artifact }) {
               </div>
               {artifact.evidence && (
                 <a
-                  href={artifact.evidence.href}
+                  href={asset(artifact.evidence.href)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-accent-ink transition-opacity hover:opacity-90"

@@ -112,14 +112,19 @@ export const domains: Domain[] = [
     artifacts: [
       {
         id: "citizen-artifact-1",
-        title: "«Digital Citizenship Artifact»",
-        summary: "«One line describing the evidence and what it shows.»",
-        tags: ["Digital Citizenship", "Media Literacy"],
+        title: "Healthy Tech at Home: A Family Memo",
+        summary:
+          "A memo to families with research-based strategies for healthy technology use and reducing online-rooted peer conflict.",
+        tags: ["Family Communication", "Digital Citizenship"],
         reflection: [
-          "«Describe the lesson, policy, or practice you developed.»",
+          "«Describe the context: what prompted this memo, and how did you develop it?»",
           "«Reflect on how it helped students participate responsibly online.»",
-          "«Justify why this project belongs under the Citizen standard.»",
+          "This memo models ISTE Standard 3.1.c (Model Inclusive, Healthy Use) by explaining how excessive device use affects students' socioemotional health and sleep, and Standard 3.1.d (Model Safe, Ethical, Legal Use) by teaching a concrete strategy — \"Freeze before you 'tease'\" — for respectful online communication.",
         ],
+        evidence: {
+          label: "Read the memo (PDF)",
+          href: "/artifacts/citizen-healthy-tech-memo.pdf",
+        },
       },
     ],
   },
