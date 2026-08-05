@@ -157,15 +157,20 @@ export const domains: Domain[] = [
     artifacts: [
       {
         id: "leader-artifact-1",
-        title: "«Leadership Artifact»",
-        summary: "«Describe the artifact: what it is, what it contains, and what it shows.»",
-        tags: ["Leadership", "Advocacy"],
+        title: "Research Article Critique: Instructional Technology Leadership",
+        summary:
+          "A critique of Edelberg's (2020) study examining how K-12 public school district superintendents perceive their own roles and responsibilities as instructional technology leaders. My review summarizes the study's central finding that district leaders prioritize the logistics of technology implementation over the pedagogical strategies needed to improve classroom instruction, then evaluates its threats to validity and its limitations, including the reliance on self-reported survey data and the absence of any comparison across socioeconomic status.",
+        tags: ["Research Critique", "Technology Leadership"],
         justification: [
-          "«Explain why you included this artifact and how it connects to ISTE Standard 3.3, Empowering Leader.»",
+          "In my critique I aligned this article with the ISTE Visionary Planner standard, because the study examines how technology implementation is planned and continuously evaluated. Edelberg showed that superintendents agree creating a technology plan and establishing district goals are important (3.2.b), but that they fell short on evaluating the plan's progress as technology was implemented (3.2.c). Superintendents also did not ensure teachers had the proper competency to execute the implementation, showing a lack of effective continuous communication with stakeholders (3.2.d).",
         ],
         reflection: [
-          "«Reflect on completing this project: what you learned and how it shaped your practice.»",
+          "Working through this critique reinforced how important it is to analyze data around technology rather than assume a new tool is working. As education leaders, we have a responsibility to ensure that the programs and platforms we implement are effective and are genuinely supporting student learning. The emphasis leaders place on a new platform heavily influences how teachers implement it in their classrooms, so it is important that we model the same commitment and follow-through we are asking of them.",
         ],
+        evidence: {
+          label: "Read the critique (PDF)",
+          href: "/artifacts/leader-research-article-critique.pdf",
+        },
       },
     ],
   },
