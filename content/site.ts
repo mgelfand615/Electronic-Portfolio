@@ -67,10 +67,14 @@ export const person = {
     "Master of Education (M.Ed.) in Curriculum & Instruction · ELDT 5100 — Technology Integration in Education",
   /** Hero headline — the big editorial statement */
   headline: "Educator. Learner. Designer of student-centered experiences.",
-  /** 1–3 sentence intro shown on the home page */
-  intro: [
-    "Welcome to my professional electronic portfolio (ePortfolio), created to satisfy the requirements of ELDT 5100 — Technology Integration in Education. This site documents my growth through the International Society for Technology in Education (ISTE) Standards for Education Leaders: Citizen, Leader, Learner, and Designer, with each section pairing reflection with real artifacts from my practice.",
-    "I'm an elementary school teacher with Charlotte-Mecklenburg Schools. I've taught 3rd grade and 2nd grade, and I'll soon be teaching 4th grade. I'm passionate about integrating technology in ways that make learning more engaging, equitable, and student-centered for every child in my classroom.",
+  /** Hero blurb — what this site is and why it exists. */
+  intro:
+    "Welcome to my professional electronic portfolio (ePortfolio), created to satisfy the requirements of ELDT 5100 — Technology Integration in Education. This site documents my growth through the International Society for Technology in Education (ISTE) Standards for Education Leaders: Citizen, Leader, Designer, and Learner, with each section pairing reflection with real artifacts from my practice.",
+  /** About Me paragraphs. The first renders larger; the rest as body text. */
+  about: [
+    "I'm an elementary school teacher with Charlotte-Mecklenburg Schools. I've taught 3rd grade and 2nd grade, and I'll soon be teaching 4th grade.",
+    "My teaching philosophy revolves around a strong passion for supporting students in any way possible, starting with creating a safe and supportive environment where every child feels secure enough to take risks as a learner. Beyond that, I strive to differentiate materials to meet students exactly where they are, so that every student has a genuine entry point into the work.",
+    "Technology is one of the most powerful tools I have for doing both of those things. I'm passionate about integrating technology in ways that make learning more engaging, equitable, and student-centered for every child in my classroom.",
   ],
   /** Path to a headshot placed in /public (e.g. "/headshot.jpg"). Empty = initials avatar. */
   photo: "/headshot.jpg",
@@ -95,8 +99,11 @@ export const featureImage = {
 
 export const socials: SocialLink[] = [
   { label: "Email", href: "mailto:mgelfand@charlotte.edu", icon: "email" },
-  // { label: "LinkedIn", href: "https://linkedin.com/in/«you»", icon: "linkedin" },
-  // { label: "X / Twitter", href: "https://x.com/«you»", icon: "x" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/madison-gelfand-4bb447209/",
+    icon: "linkedin",
+  },
 ];
 
 /* ── Primary navigation ─────────────────────────────────────────────────── */
@@ -105,21 +112,24 @@ export const nav: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "Citizen", href: "/citizen" },
   { label: "Leader", href: "/leader" },
-  { label: "Learner", href: "/learner" },
   { label: "Designer", href: "/designer" },
+  { label: "Learner", href: "/learner" },
 ];
 
-/* ── The four ISTE Educator domains ─────────────────────────────────────── */
+/* ── The four ISTE Education Leaders domains ─────────────────────────────────
+   Ordered by standard number (3.1 → 3.3 → 3.4 → 3.5). The `index` numerals
+   follow this display order, and both the nav and the home page grid read
+   from this array, so reordering here reorders the whole site.             */
 
 export const domains: Domain[] = [
   {
     slug: "citizen",
     index: "01",
-    standard: "ISTE 2.3",
+    standard: "ISTE 3.1",
     title: "Citizen",
-    tagline: "Modeling responsible participation in the digital world.",
+    tagline: "Advancing equity, inclusion, and digital citizenship.",
     description:
-      "Educators inspire students to positively contribute to and responsibly participate in the digital world.",
+      "Equity and Citizenship Advocate: Leaders use technology to increase equity, inclusion and digital citizenship practices.",
     narrative: [
       "«Write about how you cultivate digital citizenship — online safety, media literacy, ethical use of technology, and empowering students as responsible digital contributors.»",
     ],
@@ -145,11 +155,11 @@ export const domains: Domain[] = [
   {
     slug: "leader",
     index: "02",
-    standard: "ISTE 2.2",
+    standard: "ISTE 3.3",
     title: "Leader",
-    tagline: "Advocating for student success and empowerment.",
+    tagline: "Empowering teachers and learners to innovate with technology.",
     description:
-      "Educators seek out opportunities for leadership to support student empowerment and success and to improve teaching and learning.",
+      "Empowering Leader: Leaders create a culture where teachers and learners are empowered to use technology in innovative ways to enrich teaching and learning.",
     narrative: [
       "«Write about how you lead — mentoring peers, leading initiatives, advocating for equitable access to technology, or shaping a shared vision at your school.»",
     ],
@@ -168,13 +178,42 @@ export const domains: Domain[] = [
     ],
   },
   {
-    slug: "learner",
+    // Page 4 — "your choice" of a remaining ISTE standard. Chosen: Designer
+    // (3.4 Systems Designer). The one remaining Education Leaders standard is
+    // 3.2 Visionary Planner. To switch, update the fields below and rename
+    // `slug` + the app/designer/ folder + the nav href to match.
+    slug: "designer",
     index: "03",
-    standard: "ISTE 2.1",
-    title: "Learner",
-    tagline: "Continually growing through and with others.",
+    standard: "ISTE 3.4",
+    title: "Designer",
+    tagline: "Building teams and systems that sustain learning with technology.",
     description:
-      "Educators continually improve their practice by learning from and with others and by exploring proven and promising practices that leverage technology to improve student learning.",
+      "Systems Designer: Leaders build teams and systems to implement, sustain and continually improve the use of technology to support learning.",
+    narrative: [
+      "«Write about how you design instruction and systems — using Universal Design for Learning (UDL), differentiation, and technology to build authentic learning environments responsive to every learner.»",
+    ],
+    artifacts: [
+      {
+        id: "designer-artifact-1",
+        title: "«Instructional Design Artifact»",
+        summary: "«One line describing the evidence and what it shows.»",
+        tags: ["Instructional Design", "Universal Design for Learning"],
+        reflection: [
+          "«Describe the learning experience you designed and the tools you used.»",
+          "«Reflect on how the design accommodated learner variability.»",
+          "«Justify why this project belongs under the Designer standard.»",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "learner",
+    index: "04",
+    standard: "ISTE 3.5",
+    title: "Learner",
+    tagline: "Modeling continuous professional learning.",
+    description:
+      "Connected Learner: Leaders model and promote continuous professional learning for themselves and others.",
     narrative: [
       "«Write about how you pursue ongoing professional learning — professional learning communities (PLCs), conferences, coursework, online communities, and how you set and reflect on professional goals.»",
     ],
@@ -190,35 +229,6 @@ export const domains: Domain[] = [
           "«Justify why this project belongs under the Learner standard.»",
         ],
         // evidence: { label: "View certificate", href: "#" },
-      },
-    ],
-  },
-  {
-    // Page 4 — "your choice" of a remaining ISTE standard. Chosen: Designer.
-    // Other options if you switch later: Collaborator (2.4), Facilitator (2.6),
-    // Analyst (2.7). To change, update the fields below and rename `slug` + the
-    // app/designer/ folder + the nav href to match.
-    slug: "designer",
-    index: "04",
-    standard: "ISTE 2.5",
-    title: "Designer",
-    tagline: "Crafting authentic, learner-driven experiences.",
-    description:
-      "Educators design authentic, learner-driven activities and environments that recognize and accommodate learner variability.",
-    narrative: [
-      "«Write about how you design instruction — using Universal Design for Learning (UDL), differentiation, and technology to build authentic learning environments responsive to every learner.»",
-    ],
-    artifacts: [
-      {
-        id: "designer-artifact-1",
-        title: "«Instructional Design Artifact»",
-        summary: "«One line describing the evidence and what it shows.»",
-        tags: ["Instructional Design", "Universal Design for Learning"],
-        reflection: [
-          "«Describe the learning experience you designed and the tools you used.»",
-          "«Reflect on how the design accommodated learner variability.»",
-          "«Justify why this project belongs under the Designer standard.»",
-        ],
       },
     ],
   },

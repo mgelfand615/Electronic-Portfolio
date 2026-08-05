@@ -34,7 +34,7 @@ export default function Home() {
                 {person.headline}
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-                {person.intro[0]}
+                {person.intro}
               </p>
 
               <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -90,17 +90,25 @@ export default function Home() {
       </section>
 
       {/* ── About strip ──────────────────────────────────────────────── */}
-      {person.intro[1] && (
+      {person.about.length > 0 && (
         <section className="border-y border-line bg-surface-2">
           <div className="mx-auto max-w-4xl px-5 py-14 sm:px-8 sm:py-20">
             <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
               About Me
             </h2>
+            {/* First paragraph sets the tone in display type; the rest read as body copy. */}
             <p className="mt-4 font-display text-2xl leading-relaxed text-ink sm:text-3xl">
-              {person.intro[1]}
+              {person.about[0]}
             </p>
+            {person.about.length > 1 && (
+              <div className="mt-6 max-w-3xl space-y-4 text-[15px] leading-relaxed text-ink/90">
+                {person.about.slice(1).map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
+              </div>
+            )}
             {person.program && (
-              <p className="mt-6 text-sm text-muted">{person.program}</p>
+              <p className="mt-8 text-sm text-muted">{person.program}</p>
             )}
           </div>
         </section>
