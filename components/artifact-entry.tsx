@@ -11,7 +11,9 @@ import { asset } from "@/lib/format";
  * Everything renders inline; there is no modal to open.
  */
 export function ArtifactEntry({ artifact }: { artifact: Artifact }) {
-  const { evidence } = artifact;
+  // The first link is what the title points at; the rest are listed below
+  // the description so a single artifact can reference more than one source.
+  const [primaryLink, ...extraLinks] = artifact.evidence ?? [];
 
   return (
     <article
@@ -39,9 +41,9 @@ export function ArtifactEntry({ artifact }: { artifact: Artifact }) {
         )}
 
         <h3 className="font-display text-2xl font-semibold leading-snug tracking-tight text-ink">
-          {evidence ? (
+          {primaryLink ? (
             <a
-              href={asset(evidence.href)}
+              href={asset(primaryLink.href)}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-start gap-2 transition-colors hover:text-accent"
@@ -50,7 +52,7 @@ export function ArtifactEntry({ artifact }: { artifact: Artifact }) {
                 {artifact.title}
               </span>
               {/* Not shown, but tells screen readers where the link goes. */}
-              <span className="sr-only">, {evidence.label}</span>
+              <span className="sr-only">, {primaryLink.label}</span>
               <ExternalIcon className="mt-1.5 shrink-0 text-base text-muted transition-colors group-hover:text-accent" />
             </a>
           ) : (
@@ -61,6 +63,24 @@ export function ArtifactEntry({ artifact }: { artifact: Artifact }) {
         <p className="mt-3 text-[15px] leading-relaxed text-ink/90">
           {artifact.summary}
         </p>
+
+        {extraLinks.length > 0 && (
+          <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
+            {extraLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={asset(link.href)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-1.5 text-sm font-medium text-accent"
+                >
+                  {link.label}
+                  <ExternalIcon className="text-base transition-transform duration-200 group-hover:-translate-y-0.5" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
 
       {/* ── Right: justification + reflection ───────────────────────── */}
