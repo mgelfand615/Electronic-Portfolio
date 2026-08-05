@@ -21,10 +21,14 @@ export function initials(name: string): string {
  * next/link handles basePath automatically, but next/image src values do NOT,
  * so any image referenced from content/site.ts (headshot, artifact images)
  * must be wrapped with asset() to resolve on a GitHub Pages project sub-path.
+ * Also used for evidence links so a locally-hosted PDF resolves correctly
+ * alongside genuinely external links (Drive, YouTube, mailto), which are
+ * left untouched.
  */
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const ABSOLUTE_URL = /^([a-z][a-z0-9+.-]*:|\/\/)/i;
 
 export function asset(path: string): string {
-  if (!path) return path;
+  if (!path || ABSOLUTE_URL.test(path)) return path;
   return `${BASE_PATH}${path.startsWith("/") ? "" : "/"}${path}`;
 }
