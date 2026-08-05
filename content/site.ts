@@ -34,8 +34,10 @@ export type Artifact = {
   justification: string[];
   /** Your reflection on completing the project */
   reflection: string[];
-  /** Link to the artifact itself (PDF in /public/artifacts, Drive, video, …) */
-  evidence?: { label: string; href: string };
+  /** Links to the artifact (PDF in /public/artifacts, website, video, …).
+      The first entry is what the title links to; any additional entries are
+      listed beneath the description. */
+  evidence?: { label: string; href: string }[];
   /** Optional image dropped into /public/artifacts (e.g. "/artifacts/x.jpg") */
   image?: string;
 };
@@ -140,10 +142,12 @@ export const domains: Domain[] = [
         reflection: [
           "Completing this project taught me how important it is to share technology information openly with staff, students, and families. Technology is used for so much these days that everyone in our school community needs to know how to use it safely and respectfully, and writing for families pushed me to turn research into practical steps they could actually use at home.",
         ],
-        evidence: {
-          label: "Read the memo (PDF)",
-          href: "/artifacts/citizen-healthy-tech-memo.pdf",
-        },
+        evidence: [
+          {
+            label: "Read the memo (PDF)",
+            href: "/artifacts/citizen-healthy-tech-memo.pdf",
+          },
+        ],
       },
     ],
   },
@@ -167,10 +171,12 @@ export const domains: Domain[] = [
         reflection: [
           "Working through this critique reinforced how important it is to analyze data around technology rather than assume a new tool is working. As education leaders, we have a responsibility to ensure that the programs and platforms we implement are effective and are genuinely supporting student learning. The emphasis leaders place on a new platform heavily influences how teachers implement it in their classrooms, so it is important that we model the same commitment and follow-through we are asking of them.",
         ],
-        evidence: {
-          label: "Read the critique (PDF)",
-          href: "/artifacts/leader-research-article-critique.pdf",
-        },
+        evidence: [
+          {
+            label: "Read the critique (PDF)",
+            href: "/artifacts/leader-research-article-critique.pdf",
+          },
+        ],
       },
     ],
   },
@@ -188,14 +194,22 @@ export const domains: Domain[] = [
     artifacts: [
       {
         id: "designer-artifact-1",
-        title: "«Instructional Design Artifact»",
-        summary: "«Describe the artifact: what it is, what it contains, and what it shows.»",
-        tags: ["Instructional Design", "Universal Design for Learning"],
+        title: "Edpuzzle Lesson on the Prefix \"re-\"",
+        summary:
+          "Edpuzzle is an interactive learning platform where students work through video content while answering questions embedded directly in the video, giving teachers real-time data on student understanding. Teachers can assign videos from a large public library or upload and build their own, and the platform also supports standalone quizzes and professional development modules. I created an account and built a short lesson on the prefix \"re-\" in preparation for moving into 4th grade reading this fall, so that independent work would align closely with the specific skills we cover in class.",
+        tags: ["Edpuzzle", "Differentiation"],
         justification: [
-          "«Explain why you included this artifact and how it connects to ISTE Standard 3.4, Systems Designer.»",
+          "This project connects to ISTE Standard 3.4.b, Ensure Sufficient and Scalable Resources. Education leaders have a responsibility to understand the tools available to their teachers and to provide resources that let them create class materials efficiently and effectively with technology. Evaluating Edpuzzle meant looking closely at what the free version actually supports, where its limits are, such as the 20 video cap, and how it can be paired with other free tools so teachers can scale their use of it without needing a paid plan.",
         ],
         reflection: [
-          "«Reflect on completing this project: what you learned and how it shaped your practice.»",
+          "Working with Edpuzzle showed me that it is a strong option for keeping students engaged during independent work, and that the questions embedded in each video let me watch student progress in real time instead of waiting until an assignment is finished. I do not think this tool would have been as productive when I was teaching 2nd grade, but I expect it to actively engage my 4th graders. Because I am particular about independent work aligning closely with what we discuss in class, I plan to create a variety of my own videos and practice my editing skills so that my students' independent time targets the exact areas where they need to grow.",
+        ],
+        evidence: [
+          {
+            label: "View the lesson I created",
+            href: "https://edpuzzle.com/media/6a5fd9527dbb8c4aad23d85e",
+          },
+          { label: "Visit Edpuzzle", href: "https://edpuzzle.com" },
         ],
       },
     ],
@@ -221,7 +235,7 @@ export const domains: Domain[] = [
           "Building this site surfaced so many interesting resources that I plan to implement in my own classroom this coming school year. It opened my eyes to how much is available to meet the needs of teachers across very different types of classrooms, and to how those same tools can be adapted to meet the needs of individual students. I have already signed up to attend a professional development session through SchoolAI, and I am excited to try it out with my students.",
         ],
         // TODO: add the PLN website link when it is ready. Uncomment and set href:
-        // evidence: { label: "Visit the website", href: "https://…" },
+        // evidence: [{ label: "Visit the website", href: "https://…" }],
       },
     ],
   },
