@@ -24,7 +24,7 @@ export default function Home() {
           className="pointer-events-none absolute -right-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-accent-soft blur-3xl opacity-60"
         />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 sm:px-8 sm:pb-24 sm:pt-24">
-          <div className="grid items-center gap-12 md:grid-cols-[1.5fr_1fr]">
+          <div className="grid items-center gap-12 md:grid-cols-[1.15fr_1fr]">
             <div>
               <p className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1 text-xs font-medium uppercase tracking-[0.16em] text-muted">
                 <span className="h-1.5 w-1.5 rounded-full bg-highlight" />
@@ -55,110 +55,113 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Portrait / avatar */}
-            <div className="mx-auto w-full max-w-xs md:max-w-none">
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.5rem] border border-line bg-surface-2">
-                {person.photo ? (
+            {/* Project feature image */}
+            <figure className="mx-auto w-full max-w-md md:max-w-none">
+              {featureImage.src ? (
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[1.5rem] border border-line bg-surface-2">
                   <Image
-                    src={asset(person.photo)}
-                    alt={`Portrait of ${cleanName}`}
+                    src={asset(featureImage.src)}
+                    alt={featureImage.alt}
                     fill
                     priority
-                    sizes="(max-width: 768px) 20rem, 24rem"
+                    sizes="(max-width: 768px) 28rem, 32rem"
                     className="object-cover"
                   />
-                ) : (
-                  <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-accent-soft via-surface to-surface-2">
-                    <span className="font-display text-7xl font-semibold text-accent/50">
-                      {initials(person.name)}
-                    </span>
-                  </div>
-                )}
-              </div>
-              <div className="mt-4 text-center md:text-left">
-                <p className="font-display text-lg font-semibold text-ink">
-                  {cleanName}
-                </p>
-                <p className="text-sm text-muted">{cleanRole}</p>
-                {person.organization && (
-                  <p className="text-sm text-muted">{person.organization}</p>
-                )}
-              </div>
-            </div>
+                </div>
+              ) : (
+                <div className="flex aspect-[4/3] w-full flex-col items-center justify-center gap-3 rounded-[1.5rem] border-2 border-dashed border-line bg-surface-2 px-6 text-center">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-soft font-display text-xl text-accent">
+                    +
+                  </span>
+                  <p className="font-display text-lg font-semibold text-ink">
+                    A photo that captures this project
+                  </p>
+                  <p className="max-w-xs text-sm leading-relaxed text-muted">
+                    Add a copyright-free image to{" "}
+                    <code className="rounded bg-surface px-1.5 py-0.5 text-xs">
+                      public/
+                    </code>{" "}
+                    and set{" "}
+                    <code className="rounded bg-surface px-1.5 py-0.5 text-xs">
+                      featureImage
+                    </code>{" "}
+                    in{" "}
+                    <code className="rounded bg-surface px-1.5 py-0.5 text-xs">
+                      content/site.ts
+                    </code>
+                    .
+                  </p>
+                </div>
+              )}
+              {featureImage.src && featureImage.caption && (
+                <figcaption className="mt-3 text-sm text-muted">
+                  {featureImage.caption}
+                </figcaption>
+              )}
+            </figure>
           </div>
         </div>
       </section>
 
-      {/* ── About strip ──────────────────────────────────────────────── */}
+      {/* ── About Me — headshot alongside the bio ────────────────────── */}
       {person.about.length > 0 && (
         <section className="border-y border-line bg-surface-2">
-          <div className="mx-auto max-w-4xl px-5 py-14 sm:px-8 sm:py-20">
-            <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-              About Me
-            </h2>
-            {/* First paragraph sets the tone in display type; the rest read as body copy. */}
-            <p className="mt-4 font-display text-2xl leading-relaxed text-ink sm:text-3xl">
-              {person.about[0]}
-            </p>
-            {person.about.length > 1 && (
-              <div className="mt-6 max-w-3xl space-y-4 text-[15px] leading-relaxed text-ink/90">
-                {person.about.slice(1).map((paragraph, i) => (
-                  <p key={i}>{paragraph}</p>
-                ))}
+          <div className="mx-auto max-w-5xl px-5 py-14 sm:px-8 sm:py-20">
+            <div className="grid items-start gap-10 md:grid-cols-[minmax(0,17rem)_minmax(0,1fr)] md:gap-12">
+              {/* Headshot */}
+              <div className="mx-auto w-full max-w-[17rem] md:mx-0">
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.5rem] border border-line bg-surface">
+                  {person.photo ? (
+                    <Image
+                      src={asset(person.photo)}
+                      alt={`Portrait of ${cleanName}`}
+                      fill
+                      sizes="(max-width: 768px) 17rem, 17rem"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-accent-soft via-surface to-surface-2">
+                      <span className="font-display text-6xl font-semibold text-accent/50">
+                        {initials(person.name)}
+                      </span>
+                    </div>
+                  )}
+                </div>
+                <div className="mt-4 text-center md:text-left">
+                  <p className="font-display text-lg font-semibold text-ink">
+                    {cleanName}
+                  </p>
+                  <p className="text-sm text-muted">{cleanRole}</p>
+                  {person.organization && (
+                    <p className="text-sm text-muted">{person.organization}</p>
+                  )}
+                </div>
               </div>
-            )}
-            {person.program && (
-              <p className="mt-8 text-sm text-muted">{person.program}</p>
-            )}
+
+              {/* Bio */}
+              <div>
+                <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+                  About Me
+                </h2>
+                {/* First paragraph sets the tone in display type; the rest read as body copy. */}
+                <p className="mt-4 font-display text-2xl leading-relaxed text-ink sm:text-3xl">
+                  {person.about[0]}
+                </p>
+                {person.about.length > 1 && (
+                  <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-ink/90">
+                    {person.about.slice(1).map((paragraph, i) => (
+                      <p key={i}>{paragraph}</p>
+                    ))}
+                  </div>
+                )}
+                {person.program && (
+                  <p className="mt-8 text-sm text-muted">{person.program}</p>
+                )}
+              </div>
+            </div>
           </div>
         </section>
       )}
-
-      {/* ── Feature image ────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-6xl px-5 pt-16 sm:px-8 sm:pt-24">
-        <figure>
-          {featureImage.src ? (
-            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-card border border-line bg-surface-2">
-              <Image
-                src={asset(featureImage.src)}
-                alt={featureImage.alt}
-                fill
-                sizes="(max-width: 768px) 100vw, 1152px"
-                className="object-cover"
-              />
-            </div>
-          ) : (
-            <div className="flex aspect-[16/9] w-full flex-col items-center justify-center gap-3 rounded-card border-2 border-dashed border-line bg-surface-2 px-6 text-center">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-soft font-display text-xl text-accent">
-                +
-              </span>
-              <p className="font-display text-lg font-semibold text-ink">
-                A photo that captures this project
-              </p>
-              <p className="max-w-md text-sm leading-relaxed text-muted">
-                Add a copyright-free image to{" "}
-                <code className="rounded bg-surface px-1.5 py-0.5 text-xs">
-                  public/
-                </code>{" "}
-                and set{" "}
-                <code className="rounded bg-surface px-1.5 py-0.5 text-xs">
-                  featureImage
-                </code>{" "}
-                in{" "}
-                <code className="rounded bg-surface px-1.5 py-0.5 text-xs">
-                  content/site.ts
-                </code>
-                .
-              </p>
-            </div>
-          )}
-          {featureImage.src && featureImage.caption && (
-            <figcaption className="mt-3 text-sm text-muted">
-              {featureImage.caption}
-            </figcaption>
-          )}
-        </figure>
-      </section>
 
       {/* ── The four domains ─────────────────────────────────────────── */}
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
