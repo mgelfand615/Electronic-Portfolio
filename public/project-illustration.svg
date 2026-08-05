@@ -5,106 +5,108 @@
   <!-- Background -->
   <rect width="800" height="600" fill="#f5efe4"/>
 
-  <!-- Soft mint halo behind the desk -->
-  <circle cx="400" cy="290" r="215" fill="#e3ece5"/>
-  <circle cx="400" cy="290" r="215" fill="none" stroke="#cfe0d6" stroke-width="3"/>
+  <!-- Soft halo centred on the composition, tying every element together -->
+  <circle cx="406" cy="338" r="248" fill="#e3ece5"/>
+  <circle cx="406" cy="338" r="248" fill="none" stroke="#cfe0d6" stroke-width="3"/>
 
-  <!-- Floating sparkles -->
+  <!-- Sparkles, kept in the upper band around the floating elements -->
   <g fill="#7fa793">
-    <circle cx="118" cy="128" r="5"/>
-    <circle cx="690" cy="118" r="6"/>
-    <circle cx="742" cy="330" r="5"/>
-    <circle cx="72" cy="322" r="6"/>
-    <circle cx="640" cy="66" r="4"/>
+    <circle cx="238" cy="214" r="6"/>
+    <circle cx="300" cy="272" r="4"/>
+    <circle cx="188" cy="300" r="5"/>
+    <circle cx="588" cy="268" r="5"/>
+    <circle cx="640" cy="330" r="4"/>
   </g>
   <g stroke="#c2683f" stroke-width="4" stroke-linecap="round">
-    <path d="M168 92v-22M157 81h22"/>
-    <path d="M604 300v-18M595 291h18"/>
+    <path d="M296 196v-18M288 187h18"/>
+    <path d="M566 214v-16M558 206h16"/>
   </g>
 
-  <!-- Lightbulb: an idea -->
-  <g transform="translate(150 190)">
+  <!-- Lightbulb: the idea, centred directly above the laptop -->
+  <g transform="translate(446 232)">
     <g stroke="#d9a15f" stroke-width="5" stroke-linecap="round">
-      <path d="M-52 -26h-20M52 -26h20M-38 -62l-14-14M38 -62l14-14M0 -78v-20"/>
+      <path d="M-50 -22h-20M50 -22h20M-36 -56l-14-14M36 -56l14-14M0 -72v-20"/>
     </g>
-    <path d="M0 -58a38 38 0 0 1 24 67v11a10 10 0 0 1-10 10h-28a10 10 0 0 1-10-10v-11A38 38 0 0 1 0 -58z"
+    <path d="M0 -52a36 36 0 0 1 22 64v10a10 10 0 0 1-10 10h-24a10 10 0 0 1-10-10v-10A36 36 0 0 1 0 -52z"
           fill="#f2c98a" stroke="#b8863f" stroke-width="4" stroke-linejoin="round"/>
-    <path d="M-14 34h28M-12 44h24" stroke="#b8863f" stroke-width="4" stroke-linecap="round"/>
+    <path d="M-13 30h26M-11 40h22" stroke="#b8863f" stroke-width="4" stroke-linecap="round"/>
   </g>
 
-  <!-- Paper airplane: sharing and growth -->
-  <g transform="translate(628 196) rotate(-14)">
-    <path d="M-46 -18 46 -34 6 34z" fill="#fbf8f3" stroke="#3f6b57" stroke-width="4" stroke-linejoin="round"/>
-    <path d="M-46 -18 6 34 12 -6z" fill="#cfe0d6" stroke="#3f6b57" stroke-width="4" stroke-linejoin="round"/>
-    <path d="M-92 6q26 -14 46 -24" fill="none" stroke="#7fa793" stroke-width="4"
+  <!-- Paper airplane, flying out of the scene -->
+  <g transform="translate(652 178) rotate(-14)">
+    <path d="M-44 -17 44 -32 6 32z" fill="#fbf8f3" stroke="#3f6b57" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M-44 -17 6 32 12 -6z" fill="#cfe0d6" stroke="#3f6b57" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M-88 5q26 -13 44 -22" fill="none" stroke="#7fa793" stroke-width="4"
           stroke-linecap="round" stroke-dasharray="10 12"/>
   </g>
 
-  <!-- Potted plant -->
-  <g transform="translate(632 356)">
-    <path d="M0 -18c0 -34 -22 -52 -44 -56 2 30 18 50 44 56z" fill="#7fa793" stroke="#2f5343" stroke-width="4" stroke-linejoin="round"/>
-    <path d="M0 -18c0 -40 20 -60 44 -64 -2 34 -18 56 -44 64z" fill="#3f6b57" stroke="#2f5343" stroke-width="4" stroke-linejoin="round"/>
-    <path d="M0 -18v34" stroke="#2f5343" stroke-width="4" stroke-linecap="round"/>
-    <path d="M-34 14h68l-8 52a10 10 0 0 1-10 8h-32a10 10 0 0 1-10-8z"
-          fill="#c2683f" stroke="#8f4526" stroke-width="4" stroke-linejoin="round"/>
-    <path d="M-34 14h68" stroke="#8f4526" stroke-width="4" stroke-linecap="round"/>
+  <!-- ── Objects on the desk. Every bottom edge lands on y=450. ─────────── -->
+
+  <!-- Stacked books (110–230) -->
+  <g stroke-width="4" stroke-linejoin="round">
+    <rect x="114" y="378" width="112" height="22" rx="5" fill="#d9a15f" stroke="#b8863f"/>
+    <rect x="126" y="378" width="11" height="22" fill="#b8863f"/>
+    <rect x="118" y="400" width="106" height="24" rx="5" fill="#3f6b57" stroke="#2f5343"/>
+    <rect x="130" y="400" width="11" height="24" fill="#2f5343"/>
+    <rect x="110" y="424" width="120" height="26" rx="5" fill="#c2683f" stroke="#8f4526"/>
+    <rect x="122" y="424" width="11" height="26" fill="#8f4526"/>
   </g>
 
-  <!-- Stack of books -->
-  <g transform="translate(168 372)">
-    <rect x="-58" y="0" width="116" height="26" rx="6" fill="#c2683f" stroke="#8f4526" stroke-width="4"/>
-    <rect x="-46" y="-3" width="12" height="32" fill="#8f4526"/>
-    <rect x="-50" y="-26" width="104" height="26" rx="6" fill="#3f6b57" stroke="#2f5343" stroke-width="4"/>
-    <rect x="-38" y="-29" width="12" height="32" fill="#2f5343"/>
-    <rect x="-54" y="-52" width="110" height="26" rx="6" fill="#d9a15f" stroke="#b8863f" stroke-width="4"/>
-    <rect x="-42" y="-55" width="12" height="32" fill="#b8863f"/>
-  </g>
-
-  <!-- Laptop showing simple learning shapes -->
-  <g transform="translate(400 300)">
-    <rect x="-108" y="-70" width="216" height="140" rx="12" fill="#3f6b57" stroke="#2f5343" stroke-width="5"/>
-    <rect x="-92" y="-54" width="184" height="108" rx="6" fill="#fbf8f3"/>
-    <!-- screen content -->
-    <circle cx="-50" cy="-16" r="20" fill="#cfe0d6" stroke="#3f6b57" stroke-width="4"/>
-    <rect x="-14" y="-36" width="40" height="40" rx="6" fill="#f2c98a" stroke="#b8863f" stroke-width="4"/>
-    <path d="M44 -36 70 4H18z" fill="#dd9068" stroke="#8f4526" stroke-width="4" stroke-linejoin="round"/>
-    <rect x="-64" y="20" width="128" height="10" rx="5" fill="#e3ece5"/>
-    <rect x="-64" y="38" width="82" height="10" rx="5" fill="#e3ece5"/>
-    <!-- base -->
-    <path d="M-140 70h280l14 22a8 8 0 0 1-7 12H-147a8 8 0 0 1-7-12z"
-          fill="#cfe0d6" stroke="#2f5343" stroke-width="5" stroke-linejoin="round"/>
-    <rect x="-26" y="78" width="52" height="8" rx="4" fill="#7fa793"/>
-  </g>
-
-  <!-- Cup of pencils -->
-  <g transform="translate(548 356)">
-    <g stroke-width="4" stroke-linejoin="round">
-      <g transform="rotate(-12)">
-        <rect x="-6" y="-58" width="14" height="60" fill="#dd9068" stroke="#8f4526"/>
-        <path d="M-6 -58 1 -74 8 -58z" fill="#f2c98a" stroke="#8f4526"/>
-      </g>
-      <g transform="rotate(6) translate(18 0)">
-        <rect x="-6" y="-50" width="14" height="52" fill="#7fa793" stroke="#2f5343"/>
-        <path d="M-6 -50 1 -66 8 -50z" fill="#cfe0d6" stroke="#2f5343"/>
-      </g>
-    </g>
-    <path d="M-24 0h52l-6 44a8 8 0 0 1-8 6h-24a8 8 0 0 1-8-6z"
-          fill="#3f6b57" stroke="#2f5343" stroke-width="4" stroke-linejoin="round"/>
-  </g>
-
-  <!-- Alphabet + number blocks -->
-  <g transform="translate(252 404)">
-    <rect x="0" y="0" width="46" height="46" rx="8" fill="#fbf8f3" stroke="#3f6b57" stroke-width="4"/>
-    <text x="23" y="24" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700"
+  <!-- Alphabet + number blocks (244–338) -->
+  <g stroke-width="4">
+    <rect x="244" y="406" width="44" height="44" rx="8" fill="#fbf8f3" stroke="#3f6b57"/>
+    <text x="266" y="429" font-family="Georgia, 'Times New Roman', serif" font-size="25" font-weight="700"
           fill="#3f6b57" text-anchor="middle" dominant-baseline="central">A</text>
-    <rect x="54" y="0" width="46" height="46" rx="8" fill="#fbf8f3" stroke="#c2683f" stroke-width="4"/>
-    <text x="77" y="24" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700"
+    <rect x="294" y="406" width="44" height="44" rx="8" fill="#fbf8f3" stroke="#c2683f"/>
+    <text x="316" y="429" font-family="Georgia, 'Times New Roman', serif" font-size="25" font-weight="700"
           fill="#c2683f" text-anchor="middle" dominant-baseline="central">1</text>
   </g>
 
-  <!-- Desk surface -->
-  <rect x="56" y="450" width="688" height="18" rx="9" fill="#cbbda6"/>
-  <rect x="56" y="450" width="688" height="7" rx="3.5" fill="#ddd2bd"/>
-  <rect x="132" y="468" width="22" height="66" rx="8" fill="#cbbda6"/>
-  <rect x="646" y="468" width="22" height="66" rx="8" fill="#cbbda6"/>
+  <!-- Laptop (base 344–548, flat on the desk) -->
+  <g>
+    <rect x="356" y="300" width="180" height="132" rx="12" fill="#3f6b57" stroke="#2f5343" stroke-width="5"/>
+    <rect x="369" y="313" width="154" height="106" rx="6" fill="#fbf8f3"/>
+    <circle cx="402" cy="347" r="17" fill="#cfe0d6" stroke="#3f6b57" stroke-width="4"/>
+    <rect x="428" y="330" width="34" height="34" rx="6" fill="#f2c98a" stroke="#b8863f" stroke-width="4"/>
+    <path d="M490 330 512 364H468z" fill="#dd9068" stroke="#8f4526" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="384" y="380" width="124" height="8" rx="4" fill="#e3ece5"/>
+    <rect x="384" y="395" width="80" height="8" rx="4" fill="#e3ece5"/>
+    <rect x="344" y="432" width="204" height="18" rx="9" fill="#cfe0d6" stroke="#2f5343" stroke-width="5"/>
+    <rect x="428" y="437" width="36" height="6" rx="3" fill="#7fa793"/>
+  </g>
+
+  <!-- Cup of pencils (559–609) -->
+  <g>
+    <g stroke-width="4" stroke-linejoin="round">
+      <g transform="rotate(-9 575 410)">
+        <rect x="569" y="354" width="12" height="56" fill="#dd9068" stroke="#8f4526"/>
+        <path d="M569 354 575 339 581 354z" fill="#f2c98a" stroke="#8f4526"/>
+      </g>
+      <g transform="rotate(7 593 410)">
+        <rect x="587" y="364" width="12" height="46" fill="#7fa793" stroke="#2f5343"/>
+        <path d="M587 364 593 349 599 364z" fill="#cfe0d6" stroke="#2f5343"/>
+      </g>
+    </g>
+    <path d="M562 406h44l-4 38a6 6 0 0 1-6 6h-24a6 6 0 0 1-6-6z"
+          fill="#3f6b57" stroke="#2f5343" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="559" y="400" width="50" height="10" rx="5" fill="#2f5343"/>
+  </g>
+
+  <!-- Potted plant (617–703) -->
+  <g>
+    <path d="M660 364Q628 358 618 328Q652 324 660 360Z" fill="#7fa793" stroke="#2f5343"
+          stroke-width="4" stroke-linejoin="round"/>
+    <path d="M660 354Q696 346 704 314Q666 312 660 350Z" fill="#3f6b57" stroke="#2f5343"
+          stroke-width="4" stroke-linejoin="round"/>
+    <path d="M660 404V352" stroke="#2f5343" stroke-width="4" stroke-linecap="round"/>
+    <path d="M622 408h76l-7 36a6 6 0 0 1-6 6h-50a6 6 0 0 1-6-6z"
+          fill="#c2683f" stroke="#8f4526" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="617" y="400" width="86" height="11" rx="5.5" fill="#8f4526"/>
+  </g>
+
+  <!-- ── Desk ───────────────────────────────────────────────────────────── -->
+  <rect x="60" y="450" width="680" height="16" rx="8" fill="#cbbda6"/>
+  <rect x="60" y="450" width="680" height="6" rx="3" fill="#ddd2bd"/>
+  <rect x="142" y="466" width="22" height="64" rx="8" fill="#cbbda6"/>
+  <rect x="636" y="466" width="22" height="64" rx="8" fill="#cbbda6"/>
 </svg>
