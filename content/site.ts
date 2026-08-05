@@ -73,8 +73,8 @@ export const person = {
   /** About Me paragraphs. The first renders larger; the rest as body text. */
   about: [
     "I'm an elementary school teacher with Charlotte-Mecklenburg Schools. I've taught 3rd grade and 2nd grade, and I'll soon be teaching 4th grade.",
-    "My philosophy on teaching revolves around having a strong passion for supporting students in any way possible by creating a safe and supportive environment. Beyond that, I strive to differentiate materials to meet students exactly where they are.",
-    "I'm passionate about integrating technology in ways that make learning more engaging, equitable, and student-centered for every child in my classroom.",
+    "My teaching philosophy revolves around a strong passion for supporting students in any way possible, starting with creating a safe and supportive environment where students feel comfortable taking risks. Beyond that, I strive to differentiate materials to meet students exactly where they are.",
+    "Technology is one of the best tools I have for doing both of those things. I'm passionate about integrating technology in ways that make learning more engaging, equitable, and student-centered for every child in my classroom.",
   ],
   /** Path to a headshot placed in /public (e.g. "/headshot.jpg"). Empty = initials avatar. */
   photo: "/headshot.jpg",
