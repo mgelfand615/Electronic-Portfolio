@@ -77,6 +77,20 @@ export const person = {
   location: "Charlotte, North Carolina",
 };
 
+/* ── Feature image ──────────────────────────────────────────────────────────
+   A wide photo on the home page that captures what this project is about —
+   your classroom, students working with technology, a project in progress.
+   Drop a copyright-free image in /public (e.g. "/project-photo.jpg") and set
+   `src` below. While `src` is empty the home page shows a labeled placeholder.
+   Always fill in `alt` for screen readers.                                  */
+
+export const featureImage = {
+  src: "",
+  alt: "",
+  /** Optional caption shown beneath the image. */
+  caption: "",
+};
+
 /* ── Contact / socials ──────────────────────────────────────────────────── */
 
 export const socials: SocialLink[] = [
@@ -224,4 +238,9 @@ export const site = {
     "A professional educator ePortfolio organized around the ISTE Standards for Education Leaders.",
   /** Deployed origin for absolute metadata URLs. */
   url: "https://mgelfand615.github.io/Electronic-Portfolio",
+  /** The official ISTE standards this portfolio is organized around. */
+  standards: {
+    label: "ISTE Standards for Education Leaders",
+    href: "https://iste.org/standards/education-leaders",
+  },
 };

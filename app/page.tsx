@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { domains, person, socials } from "@/content/site";
-import { socialIcons, ArrowIcon } from "@/components/icons";
+import { domains, featureImage, person, site, socials } from "@/content/site";
+import { socialIcons, ArrowIcon, ExternalIcon } from "@/components/icons";
 import { CopyEmail } from "@/components/copy-email";
 import { asset, clean, initials } from "@/lib/format";
 
@@ -106,6 +106,52 @@ export default function Home() {
         </section>
       )}
 
+      {/* ── Feature image ────────────────────────────────────────────── */}
+      <section className="mx-auto max-w-6xl px-5 pt-16 sm:px-8 sm:pt-24">
+        <figure>
+          {featureImage.src ? (
+            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-card border border-line bg-surface-2">
+              <Image
+                src={asset(featureImage.src)}
+                alt={featureImage.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 1152px"
+                className="object-cover"
+              />
+            </div>
+          ) : (
+            <div className="flex aspect-[16/9] w-full flex-col items-center justify-center gap-3 rounded-card border-2 border-dashed border-line bg-surface-2 px-6 text-center">
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-soft font-display text-xl text-accent">
+                +
+              </span>
+              <p className="font-display text-lg font-semibold text-ink">
+                A photo that captures this project
+              </p>
+              <p className="max-w-md text-sm leading-relaxed text-muted">
+                Add a copyright-free image to{" "}
+                <code className="rounded bg-surface px-1.5 py-0.5 text-xs">
+                  public/
+                </code>{" "}
+                and set{" "}
+                <code className="rounded bg-surface px-1.5 py-0.5 text-xs">
+                  featureImage
+                </code>{" "}
+                in{" "}
+                <code className="rounded bg-surface px-1.5 py-0.5 text-xs">
+                  content/site.ts
+                </code>
+                .
+              </p>
+            </div>
+          )}
+          {featureImage.src && featureImage.caption && (
+            <figcaption className="mt-3 text-sm text-muted">
+              {featureImage.caption}
+            </figcaption>
+          )}
+        </figure>
+      </section>
+
       {/* ── The four domains ─────────────────────────────────────────── */}
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
         <div className="max-w-2xl">
@@ -117,6 +163,15 @@ export default function Home() {
             Leaders. Each area pairs the standard with reflection and evidence
             from my classroom.
           </p>
+          <a
+            href={site.standards.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center gap-2 rounded-full border border-line bg-surface px-5 py-2.5 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent"
+          >
+            Read the {site.standards.label}
+            <ExternalIcon className="text-base" />
+          </a>
         </div>
 
         <div className="mt-12 grid gap-px overflow-hidden rounded-card border border-line bg-line sm:grid-cols-2">
