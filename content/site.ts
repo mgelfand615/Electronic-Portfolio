@@ -65,16 +65,16 @@ export const person = {
   /** Optional program / course this portfolio supports */
   program:
     "Master of Education (M.Ed.) in Curriculum & Instruction · ELDT 5100: Technology Integration in Education",
-  /** Hero headline — the big editorial statement */
-  headline: "Educator. Learner. Designer of student-centered experiences.",
+  /** Hero headline — drawn from the philosophy statement in About Me. */
+  headline: "Supporting students in any way possible.",
   /** Hero blurb — what this site is and why it exists. */
   intro:
-    "Welcome to my professional electronic portfolio (ePortfolio), created to satisfy the requirements of ELDT 5100: Technology Integration in Education. This site documents my growth through the International Society for Technology in Education (ISTE) Standards for Education Leaders: Citizen, Leader, Designer, and Learner, with each section pairing reflection with real artifacts from my practice.",
+    "Welcome to my professional electronic portfolio (ePortfolio), created to satisfy the requirements of ELDT 5100: Technology Integration in Education. This site documents my growth through the International Society for Technology in Education (ISTE) Standards for Education Leaders: Citizen, Leader, Designer, and Learner.",
   /** About Me paragraphs. The first renders larger; the rest as body text. */
   about: [
     "I'm an elementary school teacher with Charlotte-Mecklenburg Schools. I've taught 3rd grade and 2nd grade, and I'll soon be teaching 4th grade.",
-    "My teaching philosophy revolves around a strong passion for supporting students in any way possible, starting with creating a safe and supportive environment where every child feels secure enough to take risks as a learner. Beyond that, I strive to differentiate materials to meet students exactly where they are, so that every student has a genuine entry point into the work.",
-    "Technology is one of the most powerful tools I have for doing both of those things. I'm passionate about integrating technology in ways that make learning more engaging, equitable, and student-centered for every child in my classroom.",
+    "My philosophy on teaching revolves around having a strong passion for supporting students in any way possible by creating a safe and supportive environment. Beyond that, I strive to differentiate materials to meet students exactly where they are.",
+    "I'm passionate about integrating technology in ways that make learning more engaging, equitable, and student-centered for every child in my classroom.",
   ],
   /** Path to a headshot placed in /public (e.g. "/headshot.jpg"). Empty = initials avatar. */
   photo: "/headshot.jpg",
@@ -126,7 +126,7 @@ export const domains: Domain[] = [
     slug: "citizen",
     standard: "ISTE 3.1",
     title: "Citizen",
-    tagline: "Advancing equity, inclusion, and digital citizenship.",
+    tagline: "Equity and Citizenship Advocate",
     description:
       "Equity and Citizenship Advocate: Leaders use technology to increase equity, inclusion and digital citizenship practices.",
     artifacts: [
@@ -140,7 +140,7 @@ export const domains: Domain[] = [
           "This memo models ISTE Standard 3.1.c (Model Inclusive, Healthy Use) by explaining how excessive device use affects students' socioemotional health and sleep. It also models Standard 3.1.d (Model Safe, Ethical, Legal Use) by teaching students a concrete strategy for respectful online communication: pausing to \"freeze before you tease\" before sending a message.",
         ],
         reflection: [
-          "Completing this project taught me how important it is to share technology information openly with staff, students, and families. Technology is used for so much these days that everyone in our school community needs to know how to use it safely and respectfully, and writing for families pushed me to turn research into practical steps they could actually use at home.",
+          "Completing this project taught me the importance of sharing technology information with staff and students. Technology is being used for so much these days that it is super important for all staff, students, and parents to use it safely and respectfully.",
         ],
         evidence: [
           {
@@ -155,7 +155,7 @@ export const domains: Domain[] = [
     slug: "leader",
     standard: "ISTE 3.3",
     title: "Leader",
-    tagline: "Empowering teachers and learners to innovate with technology.",
+    tagline: "Empowering Leader",
     description:
       "Empowering Leader: Leaders create a culture where teachers and learners are empowered to use technology in innovative ways to enrich teaching and learning.",
     artifacts: [
@@ -166,11 +166,11 @@ export const domains: Domain[] = [
           "A critique of Edelberg's (2020) study examining how K-12 public school district superintendents perceive their own roles and responsibilities as instructional technology leaders. My review summarizes the study's central finding that district leaders prioritize the logistics of technology implementation over the pedagogical strategies needed to improve classroom instruction, then evaluates its threats to validity and its limitations, including the reliance on self-reported survey data and the absence of any comparison across socioeconomic status.",
         tags: ["Research Critique", "Technology Leadership"],
         justification: [
-          "I included this critique under the Empowering Leader standard because the study is fundamentally about what happens when leaders invest in technology without investing in teachers. Edelberg found that superintendents did not ensure teachers had the proper competency to execute the technology they were implementing, which is exactly the gap Standard 3.3.b asks leaders to close by building the confidence and competency of educators. The study also concluded that district leaders prioritized the logistics of implementation over the pedagogical strategies needed to improve classroom instruction, a reminder that purchasing and deploying a tool does not by itself empower teachers to use it well. Analyzing this research pushed me to think about what leading differently would require: investing in teacher capacity and instructional support alongside the technology itself.",
-          "The article also touches the Visionary Planner standard, since superintendents valued creating a technology plan and establishing district goals (3.2.b) but fell short on evaluating the plan's progress as implementation unfolded (3.2.c).",
+          "I included this critique under the Empowering Leader standard because the superintendents did not ensure that teachers had the proper competency to execute the technology implementation. The study concluded that district leaders prioritize the logistical implementation of technology rather than the pedagogical strategies needed to improve classroom instruction.",
+          "The article also aligns with the Visionary Planner standard. Superintendents agree that creating a technology plan and establishing district goals are important (3.2.b), but they fell short on evaluating the plan's progress as technology was implemented (3.2.c).",
         ],
         reflection: [
-          "Working through this critique reinforced how important it is to analyze data around technology rather than assume a new tool is working. As education leaders, we have a responsibility to ensure that the programs and platforms we implement are effective and are genuinely supporting student learning. The emphasis leaders place on a new platform heavily influences how teachers implement it in their classrooms, so it is important that we model the same commitment and follow-through we are asking of them.",
+          "Analyzing data around technology is very important. As an education leader, we have a responsibility to ensure that programs and platforms we are implementing are effective and supporting student learning. The emphasis that leaders place on new platforms heavily influences how teachers implement it into their classrooms, so it is important that we model what we want from the teacher.",
         ],
         evidence: [
           {
@@ -189,7 +189,7 @@ export const domains: Domain[] = [
     slug: "designer",
     standard: "ISTE 3.4",
     title: "Designer",
-    tagline: "Building teams and systems that sustain learning with technology.",
+    tagline: "Systems Designer",
     description:
       "Systems Designer: Leaders build teams and systems to implement, sustain and continually improve the use of technology to support learning.",
     artifacts: [
@@ -200,10 +200,10 @@ export const domains: Domain[] = [
           "Edpuzzle is an interactive learning platform where students work through video content while answering questions embedded directly in the video, giving teachers real-time data on student understanding. Teachers can assign videos from a large public library or upload and build their own, and the platform also supports standalone quizzes and professional development modules. I created an account and built a short lesson on the prefix \"re-\" in preparation for moving into 4th grade reading this fall, so that independent work would align closely with the specific skills we cover in class.",
         tags: ["Edpuzzle", "Differentiation"],
         justification: [
-          "This project connects to ISTE Standard 3.4.b, Ensure Sufficient and Scalable Resources. Education leaders have a responsibility to understand the tools available to their teachers and to provide resources that let them create class materials efficiently and effectively with technology. Evaluating Edpuzzle meant looking closely at what the free version actually supports, where its limits are, such as the 20 video cap, and how it can be paired with other free tools so teachers can scale their use of it without needing a paid plan.",
+          "This project connects to ISTE Standard 3.4.b, Ensure Sufficient and Scalable Resources. It is important for education leaders to understand and provide resources for teachers to efficiently and effectively create class materials using technology. One downside of Edpuzzle is the 20-video limit on the free version, which requires deleting old videos to free up space for new ones. However, teachers can pair Edpuzzle with other free tools, such as Google Forms to collect quiz data or local storage to save raw video files to re-upload for future cohorts. These easy workarounds allow you to maximize its outcomes without upgrading to a paid plan.",
         ],
         reflection: [
-          "Working with Edpuzzle showed me that it is a strong option for keeping students engaged during independent work, and that the questions embedded in each video let me watch student progress in real time instead of waiting until an assignment is finished. I do not think this tool would have been as productive when I was teaching 2nd grade, but I expect it to actively engage my 4th graders. Because I am particular about independent work aligning closely with what we discuss in class, I plan to create a variety of my own videos and practice my editing skills so that my students' independent time targets the exact areas where they need to grow.",
+          "From an educator and leader perspective, I believe Edpuzzle is a strong choice to help students stay engaged during independent lessons. Students answer questions directly within the videos, allowing teachers to view their progress in real time as they complete assignments. While I don't think this tool would have been as productive when I was teaching 2nd grade, I believe it will be a great way to actively engage my 4th graders. Because I am particular about independent work aligning closely with the specific topics we discuss in class, I plan to create a variety of my own videos, and practice my editing skills, to maximize the value of my students' independent work time.",
         ],
         evidence: [
           {
@@ -219,7 +219,7 @@ export const domains: Domain[] = [
     slug: "learner",
     standard: "ISTE 3.5",
     title: "Learner",
-    tagline: "Modeling continuous professional learning.",
+    tagline: "Connected Learner",
     description:
       "Connected Learner: Leaders model and promote continuous professional learning for themselves and others.",
     artifacts: [
@@ -227,13 +227,13 @@ export const domains: Domain[] = [
         id: "learner-artifact-1",
         title: "AI in Elementary School Classrooms",
         summary:
-          "A Personal Learning Network (PLN) website I built with my group, focused on how artificial intelligence (AI) can be effectively implemented in elementary school classrooms. The site gathers resources in three areas: how teachers can use artificial intelligence to plan more efficiently, how it can support student learning, and professional development opportunities for educators who want to build their own skills.",
+          "A Personal Learning Network (PLN) project I completed with my group where we focused on how artificial intelligence (AI) can be effectively implemented into elementary school classrooms. The website provides resources for how teachers can use AI to plan more efficiently, how AI can support student learning, and professional development opportunities.",
         tags: ["Personal Learning Network", "Artificial Intelligence"],
         justification: [
-          "This project continued my own technology education and reminded me that there is always more to learn and room for improvement. Technology is constantly evolving, and it is important for every education leader to keep learning new technology as it is developed so that we can properly support teachers in the classroom.",
+          "This project continued my technology education and there is always more to learn and room for improvement. Technology is constantly evolving and it's important for every education leader to be learning the new technology as it is developed so we can properly support teachers in the classroom.",
         ],
         reflection: [
-          "Building this site surfaced so many interesting resources that I plan to implement in my own classroom this coming school year. It opened my eyes to how much is available to meet the needs of teachers across very different types of classrooms, and to how those same tools can be adapted to meet the needs of individual students. I have already signed up to attend a professional development session through SchoolAI, and I am excited to try it out with my students.",
+          "I found so many interesting resources that I plan to implement into my own classroom this coming school year. It really opened my eyes to the amount of resources out there to meet the needs of teachers in different types of classrooms and how it can also meet the needs of individual students. I've signed up to attend a professional development session through SchoolAI and I'm excited to try it out in my classroom.",
         ],
         // TODO: add the PLN website link when it is ready. Uncomment and set href:
         // evidence: [{ label: "Visit the website", href: "https://…" }],

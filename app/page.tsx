@@ -171,8 +171,7 @@ export default function Home() {
           </h2>
           <p className="mt-3 text-muted">
             My portfolio is organized around the ISTE Standards for Education
-            Leaders. Each area pairs the standard with reflection and evidence
-            from my classroom.
+            Leaders.
           </p>
           <a
             href={site.standards.href}
