@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img"
+     aria-label="Cartoon illustration of a classroom desk with a laptop, stacked books, alphabet and number blocks, a cup of pencils, a potted plant, a lightbulb, and a paper airplane.">
+  <title>Learning with technology</title>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f5efe4"/>
+
+  <!-- Soft mint halo behind the desk -->
+  <circle cx="400" cy="290" r="215" fill="#e3ece5"/>
+  <circle cx="400" cy="290" r="215" fill="none" stroke="#cfe0d6" stroke-width="3"/>
+
+  <!-- Floating sparkles -->
+  <g fill="#7fa793">
+    <circle cx="118" cy="128" r="5"/>
+    <circle cx="690" cy="118" r="6"/>
+    <circle cx="742" cy="330" r="5"/>
+    <circle cx="72" cy="322" r="6"/>
+    <circle cx="640" cy="66" r="4"/>
+  </g>
+  <g stroke="#c2683f" stroke-width="4" stroke-linecap="round">
+    <path d="M168 92v-22M157 81h22"/>
+    <path d="M604 300v-18M595 291h18"/>
+  </g>
+
+  <!-- Lightbulb: an idea -->
+  <g transform="translate(150 190)">
+    <g stroke="#d9a15f" stroke-width="5" stroke-linecap="round">
+      <path d="M-52 -26h-20M52 -26h20M-38 -62l-14-14M38 -62l14-14M0 -78v-20"/>
+    </g>
+    <path d="M0 -58a38 38 0 0 1 24 67v11a10 10 0 0 1-10 10h-28a10 10 0 0 1-10-10v-11A38 38 0 0 1 0 -58z"
+          fill="#f2c98a" stroke="#b8863f" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M-14 34h28M-12 44h24" stroke="#b8863f" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Paper airplane: sharing and growth -->
+  <g transform="translate(628 196) rotate(-14)">
+    <path d="M-46 -18 46 -34 6 34z" fill="#fbf8f3" stroke="#3f6b57" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M-46 -18 6 34 12 -6z" fill="#cfe0d6" stroke="#3f6b57" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M-92 6q26 -14 46 -24" fill="none" stroke="#7fa793" stroke-width="4"
+          stroke-linecap="round" stroke-dasharray="10 12"/>
+  </g>
+
+  <!-- Potted plant -->
+  <g transform="translate(632 356)">
+    <path d="M0 -18c0 -34 -22 -52 -44 -56 2 30 18 50 44 56z" fill="#7fa793" stroke="#2f5343" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M0 -18c0 -40 20 -60 44 -64 -2 34 -18 56 -44 64z" fill="#3f6b57" stroke="#2f5343" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M0 -18v34" stroke="#2f5343" stroke-width="4" stroke-linecap="round"/>
+    <path d="M-34 14h68l-8 52a10 10 0 0 1-10 8h-32a10 10 0 0 1-10-8z"
+          fill="#c2683f" stroke="#8f4526" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M-34 14h68" stroke="#8f4526" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Stack of books -->
+  <g transform="translate(168 372)">
+    <rect x="-58" y="0" width="116" height="26" rx="6" fill="#c2683f" stroke="#8f4526" stroke-width="4"/>
+    <rect x="-46" y="-3" width="12" height="32" fill="#8f4526"/>
+    <rect x="-50" y="-26" width="104" height="26" rx="6" fill="#3f6b57" stroke="#2f5343" stroke-width="4"/>
+    <rect x="-38" y="-29" width="12" height="32" fill="#2f5343"/>
+    <rect x="-54" y="-52" width="110" height="26" rx="6" fill="#d9a15f" stroke="#b8863f" stroke-width="4"/>
+    <rect x="-42" y="-55" width="12" height="32" fill="#b8863f"/>
+  </g>
+
+  <!-- Laptop showing simple learning shapes -->
+  <g transform="translate(400 300)">
+    <rect x="-108" y="-70" width="216" height="140" rx="12" fill="#3f6b57" stroke="#2f5343" stroke-width="5"/>
+    <rect x="-92" y="-54" width="184" height="108" rx="6" fill="#fbf8f3"/>
+    <!-- screen content -->
+    <circle cx="-50" cy="-16" r="20" fill="#cfe0d6" stroke="#3f6b57" stroke-width="4"/>
+    <rect x="-14" y="-36" width="40" height="40" rx="6" fill="#f2c98a" stroke="#b8863f" stroke-width="4"/>
+    <path d="M44 -36 70 4H18z" fill="#dd9068" stroke="#8f4526" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="-64" y="20" width="128" height="10" rx="5" fill="#e3ece5"/>
+    <rect x="-64" y="38" width="82" height="10" rx="5" fill="#e3ece5"/>
+    <!-- base -->
+    <path d="M-140 70h280l14 22a8 8 0 0 1-7 12H-147a8 8 0 0 1-7-12z"
+          fill="#cfe0d6" stroke="#2f5343" stroke-width="5" stroke-linejoin="round"/>
+    <rect x="-26" y="78" width="52" height="8" rx="4" fill="#7fa793"/>
+  </g>
+
+  <!-- Cup of pencils -->
+  <g transform="translate(548 356)">
+    <g stroke-width="4" stroke-linejoin="round">
+      <g transform="rotate(-12)">
+        <rect x="-6" y="-58" width="14" height="60" fill="#dd9068" stroke="#8f4526"/>
+        <path d="M-6 -58 1 -74 8 -58z" fill="#f2c98a" stroke="#8f4526"/>
+      </g>
+      <g transform="rotate(6) translate(18 0)">
+        <rect x="-6" y="-50" width="14" height="52" fill="#7fa793" stroke="#2f5343"/>
+        <path d="M-6 -50 1 -66 8 -50z" fill="#cfe0d6" stroke="#2f5343"/>
+      </g>
+    </g>
+    <path d="M-24 0h52l-6 44a8 8 0 0 1-8 6h-24a8 8 0 0 1-8-6z"
+          fill="#3f6b57" stroke="#2f5343" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Alphabet + number blocks -->
+  <g transform="translate(252 404)">
+    <rect x="0" y="0" width="46" height="46" rx="8" fill="#fbf8f3" stroke="#3f6b57" stroke-width="4"/>
+    <text x="23" y="24" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700"
+          fill="#3f6b57" text-anchor="middle" dominant-baseline="central">A</text>
+    <rect x="54" y="0" width="46" height="46" rx="8" fill="#fbf8f3" stroke="#c2683f" stroke-width="4"/>
+    <text x="77" y="24" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700"
+          fill="#c2683f" text-anchor="middle" dominant-baseline="central">1</text>
+  </g>
+
+  <!-- Desk surface -->
+  <rect x="56" y="450" width="688" height="18" rx="9" fill="#cbbda6"/>
+  <rect x="56" y="450" width="688" height="7" rx="3.5" fill="#ddd2bd"/>
+  <rect x="132" y="468" width="22" height="66" rx="8" fill="#cbbda6"/>
+  <rect x="646" y="468" width="22" height="66" rx="8" fill="#cbbda6"/>
+</svg>

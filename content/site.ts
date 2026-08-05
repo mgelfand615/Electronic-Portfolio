@@ -43,8 +43,6 @@ export type Artifact = {
 export type Domain = {
   /** URL slug, e.g. "learner" -> /learner */
   slug: string;
-  /** Editorial numeral shown on the home page grid only, e.g. "01" */
-  index: string;
   /** ISTE standard reference, e.g. "ISTE 3.1" */
   standard: string;
   title: string;
@@ -82,15 +80,15 @@ export const person = {
 };
 
 /* ── Feature image ──────────────────────────────────────────────────────────
-   A wide photo on the home page that captures what this project is about —
-   your classroom, students working with technology, a project in progress.
-   Drop a copyright-free image in /public (e.g. "/project-photo.jpg") and set
-   `src` below. While `src` is empty the home page shows a labeled placeholder.
-   Always fill in `alt` for screen readers.                                  */
+   The image beside the welcome message on the home page. Currently an original
+   cartoon illustration drawn for this portfolio (public/project-illustration.svg).
+   To swap in a photo, drop a copyright-free file in /public and point `src` at
+   it — clearing `src` falls back to a labeled placeholder. Always keep `alt`
+   filled in for screen readers.                                             */
 
 export const featureImage = {
-  src: "",
-  alt: "",
+  src: "/project-illustration.svg",
+  alt: "Cartoon illustration of a classroom desk with a laptop, stacked books, alphabet and number blocks, a cup of pencils, a potted plant, a lightbulb, and a paper airplane.",
   /** Optional caption shown beneath the image. */
   caption: "",
 };
@@ -117,14 +115,13 @@ export const nav: NavLink[] = [
 ];
 
 /* ── The four ISTE Education Leaders domains ─────────────────────────────────
-   Ordered by standard number (3.1 → 3.3 → 3.4 → 3.5). The `index` numerals
-   follow this display order, and both the nav and the home page grid read
-   from this array, so reordering here reorders the whole site.             */
+   Ordered by standard number (3.1 → 3.3 → 3.4 → 3.5). The nav, the home page
+   grid, and the "next standard" link all read from this array, so reordering
+   here reorders the whole site.                                            */
 
 export const domains: Domain[] = [
   {
     slug: "citizen",
-    index: "01",
     standard: "ISTE 3.1",
     title: "Citizen",
     tagline: "Advancing equity, inclusion, and digital citizenship.",
@@ -152,7 +149,6 @@ export const domains: Domain[] = [
   },
   {
     slug: "leader",
-    index: "02",
     standard: "ISTE 3.3",
     title: "Leader",
     tagline: "Empowering teachers and learners to innovate with technology.",
@@ -179,7 +175,6 @@ export const domains: Domain[] = [
     // 3.2 Visionary Planner. To switch, update the fields below and rename
     // `slug` + the app/designer/ folder + the nav href to match.
     slug: "designer",
-    index: "03",
     standard: "ISTE 3.4",
     title: "Designer",
     tagline: "Building teams and systems that sustain learning with technology.",
@@ -202,7 +197,6 @@ export const domains: Domain[] = [
   },
   {
     slug: "learner",
-    index: "04",
     standard: "ISTE 3.5",
     title: "Learner",
     tagline: "Modeling continuous professional learning.",

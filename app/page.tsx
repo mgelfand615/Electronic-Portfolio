@@ -192,15 +192,10 @@ export default function Home() {
               href={`/${d.slug}`}
               className="group relative flex flex-col bg-surface p-8 transition-colors hover:bg-surface-2"
             >
-              <div className="flex items-baseline justify-between">
-                <span className="font-display text-4xl font-semibold text-accent/30 transition-colors group-hover:text-accent/60">
-                  {d.index}
-                </span>
-                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-                  {d.standard}
-                </span>
-              </div>
-              <h3 className="mt-5 font-display text-2xl font-semibold tracking-tight text-ink">
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                {d.standard}
+              </span>
+              <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight text-ink">
                 {d.title}
               </h3>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
